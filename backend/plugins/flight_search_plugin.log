@@ -1,0 +1,1718 @@
+2025-04-28 14:36:17,065 - DEBUG - Parsing decorator for function: get_iata_code
+2025-04-28 14:36:17,065 - DEBUG - Parsing param: city
+2025-04-28 14:36:17,065 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,065 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,065 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,065 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,065 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-04-28 14:36:17,065 - DEBUG - Parsing param: airline_code
+2025-04-28 14:36:17,065 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,065 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing decorator for function: get_flight_order
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: order_id
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: order_id
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing decorator for function: search_flights
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: origin_IATA_code
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: destination_IATA_code
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: departure_date
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'int'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,068 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,068 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,068 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,069 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: origin_IATA_code
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: destination_IATA_code
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: departure_date
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: passengers
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'int'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: cabin_class
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: additional_preferences
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: additional_preferences
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: additional_preferences
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,069 - DEBUG - Parsing decorator for function: book_flight
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: flight_offer_id
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,069 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,069 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,070 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: keyword
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,070 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: keyword
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,070 - DEBUG - Parsing decorator for function: search_locations
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: keyword
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 14:36:17,070 - DEBUG - Parsing param: return
+2025-04-28 14:36:17,070 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 14:36:17,070 - INFO - FlightSearchPlugin initialized.
+2025-04-28 14:36:17,070 - DEBUG - Using proactor: IocpProactor
+2025-04-28 14:36:17,071 - INFO - Searching flights from DEL to GOX on 2025-05-12 for 1 passenger(s), Class: Economy
+2025-04-28 14:36:17,072 - INFO - Formatted date and parameters: DEL \u2192 GOX, Date: 2025-05-12, Passengers: 1, Class: Economy
+2025-04-28 14:36:20,117 - ERROR - \u274c Amadeus API error during flight search: {"errors":[{"status":400,"code":4926,"title":"INVALID DATA RECEIVED","detail":"travelClass is not in the allowed enumeration","source":{"pointer":"travelClass","example":"ECONOMY"}}]}
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 536, in search_flights
+    response = self.amadeus_service.shopping.flight_offers_search.get(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\shopping\_flight_offers_search.py", line 32, in get
+    return self.client.get('/v2/shopping/flight-offers', **params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-04-28 16:16:55,152 - DEBUG - Parsing decorator for function: get_iata_code
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: city
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: airline_code
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,153 - DEBUG - Parsing decorator for function: get_flight_order
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: order_id
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,153 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: order_id
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,153 - DEBUG - Parsing decorator for function: search_flights
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: origin_IATA_code
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,153 - DEBUG - Parsing param: destination_IATA_code
+2025-04-28 16:16:55,153 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: departure_date
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: <class 'int'>
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,154 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,154 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,154 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,154 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: origin_IATA_code
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: destination_IATA_code
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: departure_date
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: passengers
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'int'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: cabin_class
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: additional_preferences
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: additional_preferences
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Union
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: additional_preferences
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,155 - DEBUG - Parsing decorator for function: book_flight
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: flight_offer_id
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,155 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-04-28 16:16:55,155 - DEBUG - Parsing param: keyword
+2025-04-28 16:16:55,155 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,156 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: keyword
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,156 - DEBUG - Parsing decorator for function: search_locations
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: keyword
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'dict'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: <class 'str'>
+2025-04-28 16:16:55,156 - DEBUG - Parsing param: return
+2025-04-28 16:16:55,156 - DEBUG - Parsing annotation: typing.Any
+2025-04-28 16:16:55,156 - INFO - FlightSearchPlugin initialized.
+2025-04-28 16:16:55,156 - DEBUG - Using proactor: IocpProactor
+2025-04-28 16:16:55,157 - INFO - Searching flights from DEL to GOX on 2025-05-12 for 1 passenger(s), Class: Economy
+2025-04-28 16:16:55,159 - INFO - Formatted date and parameters: DEL \u2192 GOX, Date: 2025-05-12, Passengers: 1, Class: ECONOMY
+2025-04-28 16:17:01,921 - INFO - Found 4 flight offers.
+2025-04-28 16:17:01,921 - INFO - Cache file 'flight_offers_cache.json' does not exist. Creating a new one.
+2025-04-28 16:17:01,925 - INFO - \u2705 Flight offers cached to file successfully
+2025-05-01 12:24:27,661 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:24:27,661 - DEBUG - Parsing param: city
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: airline_code
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: order_id
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: order_id
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: departure_date
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:24:27,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,662 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,663 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: departure_date
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,663 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:24:27,663 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:24:27,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,663 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,664 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: keyword
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,664 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: keyword
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,664 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: keyword
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:24:27,664 - DEBUG - Parsing param: return
+2025-05-01 12:24:27,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:24:27,664 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:24:27,665 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:24:27,665 - INFO - Searching flights from DEL to GOX on 2025-05-12 for 1 passenger(s), Class: Economy
+2025-05-01 12:24:27,678 - INFO - Formatted date and parameters: DEL \u2192 GOX, Date: 2025-05-12, Passengers: 1, Class: ECONOMY
+2025-05-01 12:24:32,175 - INFO - Found 4 flight offers.
+2025-05-01 12:24:32,176 - INFO - \u2705 Flight offers cached to file successfully
+2025-05-01 12:24:32,177 - INFO - Fetching flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8=%3D
+2025-05-01 12:24:33,076 - ERROR - Error retrieving flight order for ID eJzTd9f3cjI29TcDAAp2Ah8=%3D: [404]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 141, in get_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).get()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 20, in get
+    return self.client.get('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.NotFoundError: [404]
+
+2025-05-01 12:25:08,178 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: city
+2025-05-01 12:25:08,178 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,178 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,178 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,178 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: airline_code
+2025-05-01 12:25:08,178 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,178 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,178 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,178 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: order_id
+2025-05-01 12:25:08,178 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,178 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,178 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: order_id
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: departure_date
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,179 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,179 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,179 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: departure_date
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: passengers
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,180 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,180 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: keyword
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,180 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,180 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,180 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,181 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: keyword
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,181 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,181 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: keyword
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,181 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:25:08,181 - DEBUG - Parsing param: return
+2025-05-01 12:25:08,181 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:25:08,181 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:25:08,181 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:25:08,182 - INFO - Fetching flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8=%3D
+2025-05-01 12:25:11,197 - ERROR - Error retrieving flight order for ID eJzTd9f3cjI29TcDAAp2Ah8=%3D: [404]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 141, in get_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).get()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 20, in get
+    return self.client.get('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.NotFoundError: [404]
+
+2025-05-01 12:26:30,661 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:26:30,661 - DEBUG - Parsing param: city
+2025-05-01 12:26:30,661 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: airline_code
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: order_id
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: order_id
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: departure_date
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,662 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,662 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,662 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,663 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: departure_date
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: passengers
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,663 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,663 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,663 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,664 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: keyword
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,664 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,664 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: keyword
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,664 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,664 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,664 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,665 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:26:30,665 - DEBUG - Parsing param: keyword
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,665 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:26:30,665 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:26:30,665 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:26:30,665 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:26:30,665 - DEBUG - Parsing param: return
+2025-05-01 12:26:30,665 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:26:30,665 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:26:30,665 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:26:30,667 - INFO - Fetching flight order with ID: JB35O6
+2025-05-01 12:26:34,463 - ERROR - Error retrieving flight order for ID JB35O6: [404]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 141, in get_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).get()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 20, in get
+    return self.client.get('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.NotFoundError: [404]
+
+2025-05-01 12:28:12,912 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:28:12,912 - DEBUG - Parsing param: city
+2025-05-01 12:28:12,912 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,912 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,912 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,912 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,912 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:28:12,912 - DEBUG - Parsing param: airline_code
+2025-05-01 12:28:12,912 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,912 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,912 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: order_id
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: order_id
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: departure_date
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,913 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:28:12,913 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:28:12,913 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: departure_date
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,914 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,914 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,914 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,914 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,914 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,915 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,915 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,915 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,915 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:12,915 - DEBUG - Parsing param: return
+2025-05-01 12:28:12,915 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:12,915 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:28:12,915 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:28:12,916 - INFO - Attempting to delete flight order with ID: JB35O6
+2025-05-01 12:28:14,681 - ERROR - Error deleting flight order for ID JB35O6: [400]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 165, in delete_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).delete()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 34, in delete
+    return self.client.delete('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 86, in delete
+    return self.request('DELETE', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-05-01 12:28:46,307 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: city
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: airline_code
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: order_id
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: order_id
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: departure_date
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,308 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:28:46,308 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,309 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: departure_date
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: passengers
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,309 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,309 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,309 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,310 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,310 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,310 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: keyword
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:28:46,310 - DEBUG - Parsing param: return
+2025-05-01 12:28:46,310 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:28:46,310 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:28:46,311 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:28:46,312 - INFO - Attempting to delete flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8=%3D
+2025-05-01 12:28:48,564 - ERROR - Error deleting flight order for ID eJzTd9f3cjI29TcDAAp2Ah8=%3D: [400]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 165, in delete_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).delete()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 34, in delete
+    return self.client.delete('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 86, in delete
+    return self.request('DELETE', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-05-01 12:37:02,769 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: city
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,769 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,769 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: airline_code
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,769 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,769 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: order_id
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,769 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,769 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:37:02,769 - DEBUG - Parsing param: order_id
+2025-05-01 12:37:02,769 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,769 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: departure_date
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,770 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: departure_date
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:37:02,770 - DEBUG - Parsing param: passengers
+2025-05-01 12:37:02,770 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,771 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,771 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: keyword
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,771 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,771 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,772 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: keyword
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,772 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,772 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: keyword
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,772 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:37:02,772 - DEBUG - Parsing param: return
+2025-05-01 12:37:02,772 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:37:02,772 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:37:02,772 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:37:02,773 - INFO - Attempting to delete flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8=%3D
+2025-05-01 12:37:05,542 - ERROR - Error deleting flight order for ID eJzTd9f3cjI29TcDAAp2Ah8=%3D: [400]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 173, in delete_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).delete()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 34, in delete
+    return self.client.delete('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 86, in delete
+    return self.request('DELETE', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-05-01 12:37:05,550 - ERROR - \u274cError deleting flight order: {"errors":[{"status":400,"code":4926,"title":"INVALID DATA RECEIVED","detail":"Only GDS and NDC orders can be cancelled","source":{"pointer":"flightOrderId"}}]}
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 173, in delete_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).delete()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 34, in delete
+    return self.client.delete('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 86, in delete
+    return self.request('DELETE', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-05-01 12:39:58,973 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: city
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: airline_code
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: order_id
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: order_id
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: departure_date
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:39:58,973 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,973 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,974 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: departure_date
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: passengers
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,974 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,974 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,974 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,975 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,975 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: keyword
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,975 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: keyword
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,975 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: keyword
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:39:58,975 - DEBUG - Parsing param: return
+2025-05-01 12:39:58,975 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:39:58,976 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:39:58,976 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:39:58,977 - INFO - Attempting to delete flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8%3D
+2025-05-01 12:40:02,176 - INFO - Flight order with ID eJzTd9f3cjI29TcDAAp2Ah8%3D successfully deleted.
+2025-05-01 12:40:40,250 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: city
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: airline_code
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: order_id
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: order_id
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: departure_date
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:40:40,250 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,250 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,251 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,251 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:40:40,251 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,251 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: departure_date
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: passengers
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,252 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,252 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: keyword
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,252 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,252 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,252 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,253 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: keyword
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,253 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,253 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: keyword
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,253 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:40:40,253 - DEBUG - Parsing param: return
+2025-05-01 12:40:40,253 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:40:40,253 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:40:40,253 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:40:40,254 - INFO - Fetching flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8%3D
+2025-05-01 12:40:43,021 - ERROR - Error retrieving flight order for ID eJzTd9f3cjI29TcDAAp2Ah8%3D: [404]
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 141, in get_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).get()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 20, in get
+    return self.client.get('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.NotFoundError: [404]
+
+2025-05-01 12:40:43,022 - ERROR - \u274c Error retrieving flight order: {"errors":[{"status":404,"code":1797,"title":"NOT FOUND","detail":"flightOrderId not found"}]}
+Traceback (most recent call last):
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\booking_restaurant\plugins\flightplugin2.py", line 141, in get_flight_order
+    response = self.amadeus_service.booking.flight_order(order_id).get()
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\booking\_flight_order.py", line 20, in get
+    return self.client.get('/v1/booking/flight-orders/{0}'
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "D:\travel agent\FlightBookingWithAIAgents-main\Auto_Flight_Booking_With_AI_Agents\.myenv\lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.NotFoundError: [404]
+
+2025-05-01 12:48:24,562 - DEBUG - Parsing decorator for function: get_iata_code
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: city
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - annotations=[{'name': 'city', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing decorator for function: get_checkin_links
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: airline_code
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - annotations=[{'name': 'airline_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing decorator for function: get_flight_order
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: order_id
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing decorator for function: delete_flight_order
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: order_id
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - annotations=[{'name': 'order_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing decorator for function: search_flights
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:48:24,562 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,562 - DEBUG - Parsing param: departure_date
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,563 - DEBUG - Parsing decorator for function: search_flights_with_preferences
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: origin_IATA_code
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: destination_IATA_code
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: departure_date
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Optional[int]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: passengers
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'int'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: cabin_class
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Optional[str]
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:48:24,563 - DEBUG - Parsing annotation: typing.Union
+2025-05-01 12:48:24,563 - DEBUG - Parsing param: additional_preferences
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - annotations=[{'name': 'origin_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'destination_IATA_code', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'departure_date', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'passengers', 'default_value': 1, 'is_required': False, 'type_': 'int', 'type_object': <class 'int'>}, {'name': 'cabin_class', 'default_value': 'ECONOMY', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}, {'name': 'additional_preferences', 'default_value': '', 'is_required': False, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,564 - DEBUG - Parsing decorator for function: book_flight
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: flight_offer_id
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - annotations=[{'name': 'flight_offer_id', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,564 - DEBUG - Parsing decorator for function: origin_airport_search
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: keyword
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,564 - DEBUG - Parsing decorator for function: destination_airport_search
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: keyword
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,564 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,564 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,564 - DEBUG - Parsing decorator for function: search_locations
+2025-05-01 12:48:24,565 - DEBUG - Parsing param: keyword
+2025-05-01 12:48:24,565 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,565 - DEBUG - annotations=[{'name': 'keyword', 'is_required': True, 'type_': 'str', 'type_object': <class 'str'>}]
+2025-05-01 12:48:24,565 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,565 - DEBUG - Parsing annotation: typing.Dict[str, typing.Any]
+2025-05-01 12:48:24,565 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,565 - DEBUG - Parsing annotation: <class 'dict'>
+2025-05-01 12:48:24,565 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,565 - DEBUG - Parsing annotation: <class 'str'>
+2025-05-01 12:48:24,565 - DEBUG - Parsing param: return
+2025-05-01 12:48:24,565 - DEBUG - Parsing annotation: typing.Any
+2025-05-01 12:48:24,565 - INFO - FlightSearchPlugin initialized.
+2025-05-01 12:48:24,565 - DEBUG - Using proactor: IocpProactor
+2025-05-01 12:48:24,566 - INFO - Attempting to delete flight order with ID: eJzTd9f3cjI29TcDAAp2Ah8%3D
+2025-05-01 12:48:28,866 - INFO - Flight order with ID eJzTd9f3cjI29TcDAAp2Ah8%3D successfully deleted.

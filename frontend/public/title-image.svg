@@ -1,0 +1,24 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Plane icon -->
+  <path d="M20 30L40 20L60 30L40 40L20 30Z" fill="url(#titleGradient)" />
+  <path d="M30 25L50 15L70 25L50 35L30 25Z" fill="white" fill-opacity="0.2" />
+  
+  <!-- Text "Flight Agent" -->
+  <text x="80" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="url(#titleGradient)">
+    Flight Agent
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="10" cy="30" r="5" fill="#3B82F6" fill-opacity="0.3" />
+  <circle cx="190" cy="30" r="5" fill="#8B5CF6" fill-opacity="0.3" />
+  <path d="M5 15L15 25" stroke="#3B82F6" stroke-width="2" stroke-opacity="0.5" />
+  <path d="M185 45L195 35" stroke="#8B5CF6" stroke-width="2" stroke-opacity="0.5" />
+</svg> 

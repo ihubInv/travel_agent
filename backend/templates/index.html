@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+      <!-- Add Marked.js for Markdown parsing -->
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+      <!-- Optional: Add syntax highlighting for code blocks -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/highlight.min.js"></script>
+    <style>
+        .chat-container {
+            height: calc(100vh - 200px);
+        }
+        .message-bubble {
+            max-width: 80%;
+            border-radius: 1rem;
+        }
+        .user-message {
+            background-color: #e9f5ff;
+            margin-left: auto;
+        }
+        .bot-message {
+            background-color: #f0f0f0;
+            margin-right: auto;
+        }
+        .agent-name {
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
+        }
+        .typing-indicator {
+            display: none;
+        }
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #888;
+            animation: wave 1.3s linear infinite;
+        }
+        .dot:nth-child(2) {
+            animation-delay: -1.1s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+        @keyframes wave {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+        .message-content {
+            white-space: pre-line;
+        }
+        .textarea-container {
+            position: relative;
+        }
+        #user-input {
+            resize: none;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .session-info {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+
+
+             /* Markdown content styling */
+        .markdown-content ul { 
+            list-style-type: disc; 
+            padding-left: 1.5em; 
+            margin: 0.5em 0; 
+        }
+        
+        .markdown-content ol { 
+            list-style-type: decimal; 
+            padding-left: 1.5em; 
+            margin: 0.5em 0; 
+        }
+        
+        .markdown-content h1, 
+        .markdown-content h2, 
+        .markdown-content h3 { 
+            margin-top: 1em; 
+            margin-bottom: 0.5em; 
+            font-weight: bold; 
+        }
+        
+        .markdown-content h1 { font-size: 1.5em; }
+        .markdown-content h2 { font-size: 1.3em; }
+        .markdown-content h3 { font-size: 1.1em; }
+        
+        .markdown-content p { margin: 0.5em 0; }
+        
+        .markdown-content pre { 
+            background: #f5f5f5; 
+            padding: 0.5em; 
+            border-radius: 4px; 
+            overflow-x: auto; 
+        }
+        
+        .markdown-content code { 
+            background: #f5f5f5; 
+            padding: 0.2em 0.4em; 
+            border-radius: 3px; 
+            font-family: monospace;
+        }
+        
+        .markdown-content blockquote { 
+            border-left: 3px solid #ccc; 
+            margin-left: 0; 
+            padding-left: 1em; 
+            color: #666; 
+        }
+        
+        .markdown-content table { 
+            border-collapse: collapse; 
+            margin: 1em 0; 
+            width: 100%;
+        }
+        
+        .markdown-content th, 
+        .markdown-content td { 
+            border: 1px solid #ddd; 
+            padding: 0.5em; 
+            text-align: left;
+        }
+        
+        .markdown-content th {
+            background-color: #f2f2f2;
+        }
+        
+        /* Agent-specific styling */
+        .reception-agent { border-left: 4px solid #4ade80; }
+        .validator-agent { border-left: 4px solid #a855f7; }
+        .search-agent { border-left: 4px solid #f97316; }
+        .book-agent { border-left: 4px solid #ef4444; }
+        .manager-agent { border-left: 4px solid #6366f1; }
+        .router-agent { border-left: 4px solid #3b82f6; }
+        
+        /* Add some animation for smoother UX */
+        .message-bubble {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+
+    .suggestion-btn {
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-width: auto; */
+}
+
+.suggestion-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.suggestions-container {
+    animation: fadeIn 0.5s ease;
+}
+
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-blue-600 mb-2">Flight Booking Assistant</h1>
+            <p class="text-gray-600">Powered by multi-agent system</p>
+            <div class="flex mt-4 space-x-2">
+                <button id="new-chat-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                    New Chat
+                </button>
+                <button id="reset-chat-btn" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded">
+                    Reset Chat
+                </button>
+                <div class="ml-auto text-sm text-gray-500 flex items-center">
+                    <span id="session-id-display" class="hidden sm:inline">Session ID: </span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div id="chat-container" class="chat-container bg-white rounded-lg shadow-md p-4 mb-4 overflow-y-auto">
+                <div id="welcome-message" class="message-bubble bot-message p-3 mb-4">
+                    <div class="agent-name text-blue-600">ReceptionAgent</div>
+                    <div class="message-content">
+                        Welcome to our Flight Booking Assistant! How can I help you with your travel plans today?
+                    </div>
+                </div>
+                
+                <!-- Messages will be added here dynamically -->
+                
+                <div id="typing-indicator" class="typing-indicator message-bubble bot-message p-3 mb-4">
+                    <div class="flex items-center space-x-1">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="textarea-container">
+                <textarea 
+                    id="user-input" 
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Type your message here..."
+                    rows="2"
+                ></textarea>
+                <button 
+                    id="send-button"
+                    class="absolute right-3 bottom-3 bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-full"
+                >
+                    Send
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Global variables
+        let sessionId = sessionStorage.getItem('session_id') || '';
+        
+        // DOM elements
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        
+        const sendButton = document.getElementById('send-button');
+        const newChatButton = document.getElementById('new-chat-btn');
+
+        const resetChatButton = document.getElementById('reset-chat-btn');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const sessionIdDisplay = document.getElementById('session-id-display');
+        
+
+        document.addEventListener('DOMContentLoaded', () => {
+        // Configure marked to use highlight.js
+        marked.setOptions({
+            highlight: function(code, lang) {
+                if (lang && hljs.getLanguage(lang)) {
+                    return hljs.highlight(code, { language: lang }).value;
+                } else {
+                    return hljs.highlightAuto(code).value;
+                }
+            },
+            breaks: true,       // Convert \n to <br>
+            gfm: true,          // GitHub Flavored Markdown
+            headerIds: true,    // Add ids to headers
+            mangle: false,      // Don't escape HTML
+            sanitize: false,    // Don't sanitize HTML (we'll handle this separately)
+            tables: true        // Enable tables
+        });
+    });
+
+
+
+
+    
+    
+
+// Add this to your existing JavaScript
+
+// Function to display suggestion buttons
+function displaySuggestions(suggestions) {
+    if (!suggestions || suggestions.length === 0) return;
+    
+    // Create a container for suggestions
+    const suggestionsContainer = document.createElement('div');
+    suggestionsContainer.className = 'suggestions-container flex flex-wrap gap-2 my-4 pl-3';
+    
+    // Add heading for suggestions
+    const suggestionsHeading = document.createElement('div');
+    suggestionsHeading.className = 'w-full text-sm text-gray-500 mb-2';
+    suggestionsHeading.textContent = 'You Might Ask...';
+    suggestionsContainer.appendChild(suggestionsHeading);
+    
+    // Create buttons for each suggestion
+    suggestions.forEach(suggestion => {
+        const button = document.createElement('button');
+        button.className = 'suggestion-btn bg-blue-50 hover:bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-sm transition-colors duration-200 inline-flex items-center whitespace-nowrap';
+
+        button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+        </svg> ${escapeHtml(suggestion)}`;
+        
+        // Add click event to submit this suggestion
+        button.addEventListener('click', () => {
+            userInput.value = suggestion;
+            userInput.style.height = 'auto';
+            userInput.style.height = (userInput.scrollHeight) + 'px';
+            sendMessage();
+        });
+        
+        suggestionsContainer.appendChild(button);
+    });
+    
+    // Insert before typing indicator
+    chatContainer.insertBefore(suggestionsContainer, typingIndicator);
+    scrollToBottom();
+}
+
+
+
+        // Update session ID display
+        function updateSessionDisplay() {
+            if (sessionId) {
+                const shortId = sessionId.substring(0, 8) + '...';
+                sessionIdDisplay.innerText = `Session ID: ${shortId}`;
+                sessionIdDisplay.classList.remove('hidden');
+            } else {
+                sessionIdDisplay.classList.add('hidden');
+            }
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', async () => {
+            updateSessionDisplay();
+            
+            // If no session exists, create one
+            if (!sessionId) {
+                await createNewSession();
+            } else {
+                // Load chat history for existing session
+                await loadChatHistory();
+            }
+            
+            // Focus on input
+            userInput.focus();
+        });
+        
+
+
+
+        // Create a new chat session
+        async function createNewSession() {
+            showTypingIndicator();
+            try {
+                const response = await fetch('/new-chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                if (data.session_id) {
+                    sessionId = data.session_id;
+                    sessionStorage.setItem('session_id', sessionId);
+                    updateSessionDisplay();
+                    
+                    // Clear chat container except for welcome message
+                    chatContainer.innerHTML = '';
+                    const welcomeMessage = document.createElement('div');
+                    welcomeMessage.className = 'message-bubble bot-message p-3 mb-4';
+                    welcomeMessage.innerHTML = `
+                        <div class="agent-name text-blue-600">ReceptionAgent</div>
+                        <div class="message-content">
+                            Welcome to our Flight Booking Assistant! How can I help you with your travel plans today?
+                        </div>
+                    `;
+                    chatContainer.appendChild(welcomeMessage);
+                    chatContainer.appendChild(typingIndicator);
+                }
+            } catch (error) {
+                console.error('Error creating new session:', error);
+                displaySystemMessage('Failed to create a new session. Please try again.');
+            }
+            hideTypingIndicator();
+        }
+        
+        // Reset current chat session
+        async function resetChatSession() {
+            if (!sessionId) return;
+            
+            showTypingIndicator();
+            try {
+                const response = await fetch('/reset', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: sessionId })
+                });
+                
+                const data = await response.json();
+                if (response.ok) {
+                    // Clear chat container
+                    chatContainer.innerHTML = '';
+                    const welcomeMessage = document.createElement('div');
+                    welcomeMessage.className = 'message-bubble bot-message p-3 mb-4';
+                    welcomeMessage.innerHTML = `
+                        <div class="agent-name text-blue-600">ReceptionAgent</div>
+                        <div class="message-content">
+                            Chat session reset. How can I help you with your travel plans today?
+                        </div>
+                    `;
+                    chatContainer.appendChild(welcomeMessage);
+                    chatContainer.appendChild(typingIndicator);
+                } else {
+                    displaySystemMessage('Failed to reset the chat. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error resetting chat:', error);
+                displaySystemMessage('Failed to reset the chat. Please try again.');
+            }
+            hideTypingIndicator();
+        }
+
+
+ // Update the load chat history function to handle suggestions in history
+async function loadChatHistory() {
+    if (!sessionId) return;
+    
+    showTypingIndicator();
+    try {
+        const response = await fetch(`/history?session_id=${sessionId}`);
+        const data = await response.json();
+        
+        if (response.ok && data.history) {
+            // Clear chat container
+            chatContainer.innerHTML = '';
+            
+            // Add each message from history
+            data.history.forEach(msg => {
+                if (msg.role === 'User') {
+                    const userMsgElem = document.createElement('div');
+                    userMsgElem.className = 'message-bubble user-message p-3 mb-4 text-right';
+                    userMsgElem.innerHTML = `
+                        <div class="agent-name text-gray-600">You</div>
+                        <div class="message-content">${escapeHtml(msg.content)}</div>
+                    `;
+                    chatContainer.appendChild(userMsgElem);
+                } else if (msg.role === 'SuggestionAgent' && msg.content && Array.isArray(JSON.parse(msg.content))) {
+                    // Handle suggestion messages
+                    try {
+                        const suggestions = JSON.parse(msg.content);
+                        displaySuggestions(suggestions);
+                    } catch (e) {
+                        console.error('Error parsing suggestions:', e);
+                    }
+                } else {
+                    const botMsgElem = document.createElement('div');
+                    botMsgElem.className = 'message-bubble bot-message p-3 mb-4';
+                    
+                    // Parse the message to extract agent name if in format "AgentName: message"
+                    let agentName = msg.role;
+                    let messageContent = msg.content;
+                    
+                    const colonIndex = messageContent.indexOf(':');
+                    if (colonIndex > 0 && colonIndex < 30) { // Reasonable length for agent name
+                        const possibleAgentName = messageContent.substring(0, colonIndex).trim();
+                        if (possibleAgentName.includes('Agent') || 
+                            ['ReceptionAgent', 'RouterAgent', 'ValidatorAgent', 'AirportSearchAgent',
+                             'FlightSearchAgent', 'FlightBookAgent', 'TravelManagerAgent'].includes(possibleAgentName)) {
+                            agentName = possibleAgentName;
+                            messageContent = messageContent.substring(colonIndex + 1).trim();
+                        }
+                    }
+                    
+                    // Parse markdown in bot messages
+                    const parsedContent = marked.parse(messageContent);
+                    
+                    botMsgElem.innerHTML = `
+                        <div class="agent-name text-blue-600">${escapeHtml(agentName)}</div>
+                        <div class="message-content markdown-content">${parsedContent}</div>
+                    `;
+                    chatContainer.appendChild(botMsgElem);
+                }
+            });
+            
+            // Add typing indicator back
+            chatContainer.appendChild(typingIndicator);
+            
+            // Scroll to bottom
+            scrollToBottom();
+        }
+    } catch (error) {
+        console.error('Error loading chat history:', error);
+        displaySystemMessage('Failed to load chat history.');
+    }
+    hideTypingIndicator();
+}
+
+        
+ 
+
+// Update your sendMessage function to handle suggestions
+async function sendMessage() {
+    const message = userInput.value.trim();
+    if (!message) return;
+    
+    // Display user message
+    displayUserMessage(message);
+    
+    // Clear input
+    userInput.value = '';
+    userInput.style.height = 'auto';
+    
+    // Show typing indicator
+    showTypingIndicator();
+    
+    // Remove any existing suggestion buttons
+    document.querySelectorAll('.suggestions-container').forEach(container => {
+        container.remove();
+    });
+    
+    try {
+        const response = await fetch('/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                instructions: message,
+                session_id: sessionId
+            })
+        });
+        
+        const data = await response.json();
+        
+        // Update session ID if provided
+        if (data.session_id) {
+            sessionId = data.session_id;
+            sessionStorage.setItem('session_id', sessionId);
+            updateSessionDisplay();
+        }
+        
+        // Process responses
+        if (data.responses && data.responses.length > 0) {
+            data.responses.forEach(resp => {
+                const agentName = resp.role || 'Assistant';
+                let messageContent = resp.content || 'No content provided';
+                
+                // Check if content already starts with agent name
+                if (messageContent.startsWith(agentName + ':')) {
+                    messageContent = messageContent.substring(agentName.length + 1).trim();
+                }
+                
+                displayBotMessage(agentName, messageContent);
+            });
+            
+            // Display suggestions if available
+            if (data.suggestions && data.suggestions.length > 0) {
+                displaySuggestions(data.suggestions);
+            }
+        } else {
+            displaySystemMessage('No response received from the server.');
+        }
+    } catch (error) {
+        console.error('Error sending message:', error);
+        displaySystemMessage('Sorry, something went wrong. Please try again.');
+    }
+    
+    hideTypingIndicator();
+}
+
+        // Display user message in chat
+        function displayUserMessage(message) {
+            const msgElement = document.createElement('div');
+            msgElement.className = 'message-bubble user-message p-3 mb-4 text-right';
+            msgElement.innerHTML = `
+                <div class="agent-name text-gray-600">You</div>
+                <div class="message-content">${escapeHtml(message)}</div>
+            `;
+            
+            // Insert before typing indicator
+            chatContainer.insertBefore(msgElement, typingIndicator);
+            scrollToBottom();
+        }
+        
+        
+        
+        
+    function displayBotMessage(agentName, message) {
+    const msgElement = document.createElement('div');
+    msgElement.className = 'message-bubble bot-message p-3 mb-4';
+    
+    // Apply different styles based on agent name
+    let agentClass = 'text-blue-600';
+    let bubbleClass = '';
+    
+    // Customize styling based on agent type
+    if (agentName.includes('Reception')) {
+        agentClass = 'text-green-600';
+        bubbleClass = 'border-l-4 border-green-400';
+    } else if (agentName.includes('Validator')) {
+        agentClass = 'text-purple-600';
+        bubbleClass = 'border-l-4 border-purple-400';
+    } else if (agentName.includes('Search')) {
+        agentClass = 'text-orange-600';
+        bubbleClass = 'border-l-4 border-orange-400';
+    } else if (agentName.includes('Book')) {
+        agentClass = 'text-red-600';
+        bubbleClass = 'border-l-4 border-red-400';
+    } else if (agentName.includes('Manager')) {
+        agentClass = 'text-indigo-600';
+        bubbleClass = 'border-l-4 border-indigo-400';
+    } else if (agentName.includes('Router')) {
+        agentClass = 'text-blue-600';
+        bubbleClass = 'border-l-4 border-blue-400';
+    }
+    
+    msgElement.className += ' ' + bubbleClass;
+    
+    // Parse markdown to HTML for the message content
+    const parsedContent = marked.parse(message);
+
+    
+    msgElement.innerHTML = `
+        <div class="agent-name ${agentClass} font-semibold">${escapeHtml(agentName)}</div>
+        <div class="message-content markdown-content">${parsedContent}</div>
+    `;
+    
+    // Insert before typing indicator
+    chatContainer.insertBefore(msgElement, typingIndicator);
+    scrollToBottom();
+}
+
+// Also update the System message to support markdown
+function displaySystemMessage(message) {
+    const msgElement = document.createElement('div');
+    msgElement.className = 'message-bubble bot-message p-3 mb-4 bg-red-50 border-l-4 border-red-500';
+    
+    // Parse markdown for system messages too
+    const parsedContent = marked.parse(message);
+    
+    // Skip rendering this specific message if content is empty or placeholder
+    if (!parsedContent.trim() || parsedContent.includes("No content provided")) {
+        return; // Skip only this message
+    }
+
+    msgElement.innerHTML = `
+        <div class="agent-name text-red-600 font-semibold">System</div>
+        <div class="message-content markdown-content">${parsedContent}</div>
+    `;
+    
+    // Insert before typing indicator
+    chatContainer.insertBefore(msgElement, typingIndicator);
+    scrollToBottom();
+}
+     
+        // Show typing indicator
+        function showTypingIndicator() {
+            typingIndicator.style.display = 'block';
+            scrollToBottom();
+        }
+        
+        // Hide typing indicator
+        function hideTypingIndicator() {
+            typingIndicator.style.display = 'none';
+        }
+        
+        // Scroll chat to bottom
+        function scrollToBottom() {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+        
+        // Auto-resize textarea based on content
+        userInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+        
+        // Event listeners
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        newChatButton.addEventListener('click', createNewSession);
+        resetChatButton.addEventListener('click', resetChatSession);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+ nest_asyncio
+ fastapi
+ uvicorn
+ semantic_kernel
+ ollama
+ amadeus
+ python-jose
+ passlib
+ bson
+ pymongo
+ motor
+ bcrypt

@@ -1,0 +1,6 @@
+@echo off
+echo Stopping any running frontend server...
+taskkill /f /im node.exe /fi "WINDOWTITLE eq frontend" 2>nul
+echo Starting frontend server...
+npm run dev
+echo Frontend server started. You can now try Google Sign-In again. 
