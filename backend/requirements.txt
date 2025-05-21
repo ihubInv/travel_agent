@@ -5,8 +5,10 @@
  ollama
  amadeus
  python-jose
- passlib
- bson
  pymongo
  motor
- bcrypt
+ langchain_community
+ langchain_ollama
+ faiss-cpu
+bcrypt==3.2.0
+passlib

@@ -22,7 +22,7 @@ from plugins.flightplugin2 import FlightSearchPlugin
 from messages import (
     TRAVEL_MANAGER_AGENT_instru, ROUTER_AGENT_instru, AIRPORT_SEARCH_AGENT_instru,
     FLIGHT_SEARCH_AGENT_instru, FLIGHT_BOOK_AGENT_instru,  VALIDATOR_AGENT_instru, EXCEPTION_AGENT_instru,
-    selection_function_prompt, termination_function_prompt, add_on,FLIGHT_CANCEL_AGENT_instru,FLIGHT_INFO_AGENT_instru
+    selection_function_prompt, termination_function_prompt, add_on,FLIGHT_CANCEL_AGENT_instru,FLIGHT_INFO_AGENT_instru,RAG_AGENT_instru,GREETING_AGENT_instru
 )
 from logger import setup_logging, log_function_entry_exit, log_async_function_entry_exit, error_logger, logger
 
@@ -61,6 +61,8 @@ FLIGHT_INFO_AGENT_NAME = "FlightInfoAgent"
 FLIGHT_CANCEL_AGENT_NAME = "FlightCancelAgent"
 EXCEPTION_AGENT_NAME = "ExceptionAgent"
 SUGGESTION_AGENT_NAME = "SuggestionAgent"
+RAG_AGENT_NAME="RagAgent"
+GREETING_AGENT_NAME="GreetingAgent"
 
 
 
@@ -98,12 +100,6 @@ def create_kernel() -> Kernel:
         error_logger.error(f"Failed to create kernel: {str(e)}\n{error_details}")
         raise
 
-# def enhance_instructions(original_instructions,session_id):
-#     """Enhances agent instructions with context awareness and markdown formatting guidelines."""
-#     # Append the add_on to the original instructions
-#     enhanced_instructions = original_instructions + "\n\n" + add_on
-    
-#     return enhanced_instructions
 
 
 def enhance_instructions(original_instructions, session_id):
@@ -124,15 +120,6 @@ def enhance_instructions(original_instructions, session_id):
     enhanced_instructions = f"{original_instructions.strip()}\n\n{add_on.strip()}"
 
     return enhanced_instructions
-
-
-
-# # Chat history implementation
-# def enhance_instructions(original_instructions, session_id):
-#     """Enhances agent instructions with context awareness from chat history."""
-#     # enhanced_instructions = original_instructions + "\n\n" + f"You have access to the complete conversation history: {load_chat_history(session_id)}. Review previous messages to understand full context before responding."
-#     enhanced_instructions = original_instructions 
-#     return enhanced_instructions
 
 
 
@@ -192,8 +179,7 @@ async def create_agent_group_chat(session_id):
         travel_manager_agent = ChatCompletionAgent(
             kernel=kernel,
             name=TRAVEL_MANAGER_AGENT_NAME,
-            instructions=enhance_instructions(TRAVEL_MANAGER_AGENT_instru,session_id),
-        
+            instructions=enhance_instructions(TRAVEL_MANAGER_AGENT_instru,session_id)
         )
         logger.debug(f"Creating {FLIGHT_INFO_AGENT_NAME}")
         flight_info_agent = ChatCompletionAgent(
@@ -214,16 +200,14 @@ async def create_agent_group_chat(session_id):
         router_agent = ChatCompletionAgent(
             kernel=kernel,
             name=ROUTER_AGENT_NAME,
-            instructions=enhance_instructions(ROUTER_AGENT_instru,session_id),
-            
+            instructions=enhance_instructions(ROUTER_AGENT_instru,session_id)
         )
 
         logger.debug(f"Creating {VALIDATOR_AGENT_NAME}")
         validator_agent = ChatCompletionAgent(
             kernel=kernel,
             name=VALIDATOR_AGENT_NAME,
-            instructions=enhance_instructions(VALIDATOR_AGENT_instru,session_id),
-            
+            instructions=enhance_instructions(VALIDATOR_AGENT_instru,session_id)
         )
 
         logger.debug(f"Creating {AIRPORT_SEARCH_AGENT_NAME}")
@@ -237,15 +221,14 @@ async def create_agent_group_chat(session_id):
         flight_search_agent = ChatCompletionAgent(
             kernel=kernel,
             name=FLIGHT_SEARCH_AGENT_NAME,
-            instructions=enhance_instructions(FLIGHT_SEARCH_AGENT_instru,session_id),
-            
+            instructions=enhance_instructions(FLIGHT_SEARCH_AGENT_instru,session_id)
         )
 
         logger.debug(f"Creating {FLIGHT_BOOK_AGENT_NAME}")
         flight_book_agent = ChatCompletionAgent(
             kernel=kernel,
             name=FLIGHT_BOOK_AGENT_NAME,
-            instructions=enhance_instructions(FLIGHT_BOOK_AGENT_instru,session_id),
+            instructions=enhance_instructions(FLIGHT_BOOK_AGENT_instru,session_id)
             # Use the KernelArguments here
         )
 
@@ -255,8 +238,20 @@ async def create_agent_group_chat(session_id):
             name=EXCEPTION_AGENT_NAME,
             instructions=enhance_instructions(EXCEPTION_AGENT_instru,session_id)
         )
- 
-      
+
+        logger.debug(f"Creating {RAG_AGENT_NAME}")
+        rag_agent = ChatCompletionAgent(
+            kernel=kernel,
+            name=RAG_AGENT_NAME,
+            instructions=enhance_instructions(RAG_AGENT_instru,session_id)
+        )
+
+        logger.debug(f"Creating {GREETING_AGENT_NAME}")
+        greeting_agent = ChatCompletionAgent(
+            kernel=kernel,
+            name=GREETING_AGENT_NAME,
+            instructions=enhance_instructions(GREETING_AGENT_instru,session_id)
+        )
 
         # Enhanced selection function to provide context
         logger.debug("Creating selection function")
@@ -307,7 +302,7 @@ async def create_agent_group_chat(session_id):
         history_reducer = ChatHistoryTruncationReducer(target_count=10)
        
         agents=[travel_manager_agent, router_agent, validator_agent, airport_search_agent, 
-                flight_search_agent, flight_book_agent,  exception_agent, flight_info_agent, flight_cancel_agent]
+                flight_search_agent, flight_book_agent, exception_agent, flight_info_agent, flight_cancel_agent, rag_agent,greeting_agent]
         
         selection_strategy=KernelFunctionSelectionStrategy(
             initial_agent=travel_manager_agent,
@@ -339,7 +334,6 @@ async def create_agent_group_chat(session_id):
         agents=agents,
         selection_strategy=selection_strategy,
         termination_strategy=termination_strategy,
-        
         )
         
 

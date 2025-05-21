@@ -1,12 +1,13 @@
+
+import { AuthProvider } from '@/components/auth-provider'
+import GoogleSignInScript from '@/components/google-signin-script'
+import NavBar from '@/components/nav-bar'
+import { ThemeProvider } from '@/components/theme-provider'
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import type { ReactNode } from 'react'
 import './globals.css'
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme-provider'
-import { AuthProvider } from '@/components/auth-provider'
-import Link from 'next/link'
-import NavBar from '@/components/nav-bar'
-import GoogleSignInScript from '@/components/google-signin-script'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import type React from "react"
 import { createContext, useContext, useEffect, useState } from "react"
 
+
 type User = {
   id: string
   name: string
@@ -245,7 +246,7 @@ const AuthContext = createContext<AuthContextType>({
 export const useAuth = () => useContext(AuthContext)
 
 // Update the API_URL to ensure it's using the correct backend URL
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)

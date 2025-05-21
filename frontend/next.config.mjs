@@ -1,3 +1,5 @@
+
+
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -26,7 +28,7 @@ const nextConfig = {
   compress: true,
   generateEtags: true,
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true, // ❌ REMOVE this line
 }
 
 mergeConfig(nextConfig, userConfig)

@@ -1,12 +1,12 @@
 "use client"
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import ThemeToggle from "@/components/theme-toggle"
 import { useAuth } from "@/components/auth-provider"
+import ThemeToggle from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
+import { AnimatePresence, motion } from "framer-motion"
+import { LogOut, Menu, User, X } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
-import { Menu, X, LogOut, User } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
 
 export default function NavBar() {
   const { isAuthenticated, logout, user } = useAuth()

@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useAuth } from "@/components/auth-provider"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { AlertCircle, CheckCircle, Loader2, MessageSquare, Trash2 } from "lucide-react"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { AlertCircle, CheckCircle, Loader2, MessageSquare, Trash2 } from "lucide-react"
+import { useEffect, useState } from "react"
 
 // type ChatHistory = {
 //   id: string
@@ -29,7 +28,7 @@ export default function ChatsPage() {
 
 
   const getChatHistory = async () => {
-    debugger
+    
     
     try {
       const response = await fetch(`${API_URL}/api/sessions`, {

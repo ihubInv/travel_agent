@@ -9,6 +9,8 @@ import uuid
 import re
 from amadeus import Client, ResponseError, Location
 from dotenv import load_dotenv
+from rag_response.rag_queries import get_rag_response
+import requests
 # Configure logging
 logging.basicConfig(
     filename="flight_search_plugin.log",  # Log file
@@ -26,6 +28,7 @@ load_dotenv()
 # amadeus_api_secret = "NFrtr6cdyy8eRM67"
 amadeus_api_key = os.getenv("AMADEUS_API_KEY")
 amadeus_api_secret =os.getenv("AMADEUS_API_SECRET")
+serper_api_key = os.getenv("SERPER_API_KEY")
 
 
 
@@ -55,7 +58,242 @@ class FlightSearchPlugin:
         self.amadeus_service = amadeus_service
         logging.info("FlightSearchPlugin initialized.")
 
+
+    async def serper_search(self, query):
+        """Perform web search using Serper API and return top 3 results"""
+        try:
+            url = "https://google.serper.dev/search"
+            headers = {
+                "X-API-KEY": serper_api_key,
+                "Content-Type": "application/json"
+            }
+            payload = {"q": query}
+            
+            response = requests.post(url, headers=headers, json=payload)
+            if response.status_code == 200:
+                data = response.json()
+                results = data.get("organic", [])[:3]  # Get top 3 organic results
+                
+                top_results = []
+                for idx, item in enumerate(results, start=1):
+                    title = item.get("title", "No Title")
+                    link = item.get("link", "No Link")
+                    snippet = item.get("snippet", "")
+                    top_results.append(f"{idx}. {title}\n{snippet}\n{link}")
+                
+                return "\n\n".join(top_results) if top_results else "No results found."
+            else:
+                return f"❌ Serper API error: {response.status_code}"
+        except Exception as e:
+            return f"❌ Error: {str(e)}"
+
+    @kernel_function(description="Handle user greetings with appropriate responses")
+    async def getGreetingResponse(self, query: str) -> str:
+        """
+        Handle greeting interactions with users in any format or language.
+        This function specifically focuses on recognizing and responding to greeting queries
+        with appropriate welcome messages based on time of day and greeting style.
         
+        This function ONLY handles:
+        1. Basic greetings (hello, hi, hey, etc.)
+        2. Time-specific greetings (good morning, good afternoon, good evening)
+        3. Formal and informal greetings
+        4. Language-specific greetings
+        5. Return user acknowledgments when applicable
+        
+        Args:
+            query (str): The user's greeting text
+            
+        Returns:
+            str: Appropriate greeting response with a brief inquiry about travel needs
+        """
+        try:
+            logging.info(f"Greeting Agent processing query: {query}")
+            
+            if not query or len(query.strip()) < 2:
+                logging.warning(f"Invalid greeting input: {query}")
+                return f"Hello! How can I help with your travel plans today?"
+            
+            # Convert to lowercase for easier matching
+            query_lower = query.lower()
+            
+            # Check for time-specific greetings
+            import datetime
+            current_hour = datetime.datetime.now().hour
+            
+            # Time-specific greeting patterns
+            if any(pattern in query_lower for pattern in ["morning", "dawn", "sunrise"]):
+                return "Good morning! How can I assist with your travel plans today?"
+            elif any(pattern in query_lower for pattern in ["afternoon", "noon", "day"]):
+                return "Good afternoon! What travel assistance do you need today?"
+            elif any(pattern in query_lower for pattern in ["evening", "night"]):
+                return "Good evening! How can I help with your travel needs?"
+            
+            # Language-specific greetings
+            if any(pattern in query_lower for pattern in ["hola", "buenos", "ola"]):
+                return "¡Hola! How can I help with your travel plans today?"
+            elif any(pattern in query_lower for pattern in ["bonjour", "salut"]):
+                return "Bonjour! How can I assist with your travel plans today?"
+            elif any(pattern in query_lower for pattern in ["namaste", "namaskar"]):
+                return "Namaste! How can I help with your travel needs today?"
+            
+            # Formal vs informal greeting patterns
+            if any(pattern in query_lower for pattern in ["greetings", "good day", "pleasure"]):
+                return "Greetings! How may I assist with your travel arrangements today?"
+            elif any(pattern in query_lower for pattern in ["hey", "sup", "yo", "what's up"]):
+                return "Hey there! What travel plans can I help you with today?"
+            
+            # Return user patterns
+            if any(pattern in query_lower for pattern in ["back", "again", "return"]):
+                return "Welcome back! How can I help with your travel needs today?"
+            
+            # Default greeting response for anything else
+            return "Hello! How can I assist with your travel plans today?"
+            
+        except Exception as e:
+            logging.error(f"Error in Greeting Agent processing {query}: {str(e)}", exc_info=True)
+            return "Hello! How can I help with your travel plans today?"
+    
+
+
+    @kernel_function(description="Check if query is a greeting and should be handled by Greetings Agent")
+    def isGreetingQuery(self, query: str) -> bool:
+        """
+        Determines if the user query is a greeting that should be handled by the Greetings Agent.
+        
+        This function checks if the query contains greeting patterns and doesn't contain
+        other travel-related content that would require specialized agent handling.
+        
+        Args:
+            query (str): The user's query text
+            
+        Returns:
+            bool: True if the query is a greeting that should be handled by Greetings Agent, False otherwise
+        """
+        try:
+            if not query or len(query.strip()) < 2:
+                return False
+            
+            # Convert to lowercase for easier matching
+            query_lower = query.lower()
+            
+            # Basic greeting patterns
+            greeting_patterns = [
+                "hello", "hi", "hey", "greetings", "good morning", "good afternoon", 
+                "good evening", "morning", "afternoon", "evening", "bonjour", "hola", 
+                "namaste", "what's up", "sup", "yo", "howdy", "aloha", "welcome"
+            ]
+            
+            # Check if query contains greeting patterns
+            has_greeting = any(pattern in query_lower for pattern in greeting_patterns)
+            
+            # Check if query contains non-greeting travel content that would be handled by other agents
+            travel_patterns = [
+                "flight", "book", "search", "cancel", "advisory", "airport", "ticket", 
+                "restriction", "safe", "danger", "warning", "travel alert", 
+                "recommendation", "suggest", "best time", "weather", "popular"
+            ]
+            
+            has_travel_content = any(pattern in query_lower for pattern in travel_patterns)
+            
+            # Count words in query (simple approximation - queries with many words are likely not just greetings)
+            word_count = len(query_lower.split())
+            
+            # Return True if query contains greeting patterns, doesn't contain travel content, and is relatively short
+            return has_greeting and not has_travel_content and word_count < 10
+            
+        except Exception as e:
+            logging.error(f"Error in isGreetingQuery for {query}: {str(e)}", exc_info=True)
+            return False
+        
+
+
+    @kernel_function(description="Get information including travel advisories from knowledge base")
+    async def getRAGResponse(self, query: str) -> str:
+        """
+        Get RAG (Retrieval-Augmented Generation) response for a given query,
+        particularly useful for travel advisory information and handling
+        miscellaneous travel-related questions not handled by other agents.
+        
+        This function can:
+        1. Retrieve travel advisory information, safety details, restrictions, and recommendations
+        2. Provide general travel knowledge and recommendations
+        3. Handle miscellaneous queries that other agents cannot process
+        4. Serve as a fallback for ambiguous or non-flight related queries
+        
+        If no relevant information is found in the knowledge base, the function
+        will indicate that no data is available and suggest alternative approaches.
+        
+        Note: This function no longer handles greeting queries as those are now
+        processed by the dedicated Greetings Agent.
+        
+        Args:
+            query (str): The user's query text, which can be a travel advisory request
+                        or miscellaneous travel-related question
+            
+        Returns:
+            str: Travel advisory information or other helpful content based on the query
+        """
+        try:
+            logging.info(f"RAG Agent processing query: {query}")
+            
+            if not query or len(query.strip()) < 2:
+                logging.warning(f"Invalid query input: {query}")
+                return f"❌ Invalid input: {query}"
+            
+            # Check if query is about travel advisories
+            advisory_patterns = ["advisory", "restriction", "safe", "danger", "warning", "travel alert", 
+                                "covid", "requirement", "visa", "security", "risk"]
+            if any(pattern in query.lower() for pattern in advisory_patterns):
+                # Call specific travel advisory knowledge base
+                response = await self.serper_search(query)
+                if response:
+                    logging.info(f"RAG Agent processing query: {response}")
+                    return response
+                
+                # Fallback for unknown advisory requests
+                return (f"""🙏 Thank you for your question! I'm here to help, but I don't have specific information about this topic at the moment.
+                You might want to ask something else or try a different travel-related question! Is there something else I can help you with?""")
+            
+            # For general travel information
+            travel_patterns = ["recommendation", "suggest", "best time", "weather", "popular", "attraction", 
+                            "culture", "custom", "packing", "currency", "language", "time zone"]
+            if any(pattern in query.lower() for pattern in travel_patterns):
+                # Call general travel information knowledge base
+                response = await self.serper_search(query)
+                if response:
+                    logging.info(f"RAG Agent processing query: {response}")
+                    return response
+            
+                        # Check if query is about travel advisories
+            advisory = ["advisory", "travel alert"]
+            if any(pattern in query.lower() for pattern in advisory):
+                # Call specific travel advisory knowledge base
+                # Call the general RAG function for other queries
+                response = await get_rag_response(query)
+                if response:
+                    logging.info(f"RAG Agent processing query: {response}")
+                    return response
+
+            # General fallback search for any other query
+            response = await self.serper_search(query)
+            if response:
+                logging.info(f"RAG Agent processing query: {response}")
+                return response
+        
+            # If no relevant information was found
+            if not response or response.strip() == "":
+                return ("I don't have specific information about that query. Would you like help with flight searches, "
+                    "bookings, travel advisories, or general travel recommendations instead?")
+                
+            logging.info(f"RAG response: {response}")
+            return response
+            
+        except Exception as e:
+            logging.error(f"Error in RAG Agent processing {query}: {str(e)}", exc_info=True)
+            return f"❌ Error processing your request: {str(e)}"        
+    
+
     @kernel_function(description="Get IATA code for a city or airport")
     async def get_iata_code(self, city: str) -> str:
         """Fetch IATA code for a given city or airport."""
@@ -689,7 +927,7 @@ class FlightSearchPlugin:
                         "issuanceLocation": "Madrid",
                         "issuanceDate": "2015-04-14",
                         "number": "00000000",
-                        "expiryDate": "2025-05-14",
+                        "expiryDate": "2027-05-14",
                         "issuanceCountry": "ES",
                         "validityCountry": "ES",
                         "nationality": "ES",

@@ -55,7 +55,7 @@ export default function ChatPage() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isBotLoading, setIsBotLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const { authenticateWithToken } = useAuth();
 
   const formatMessageContent = (content: string): string => {
@@ -493,39 +493,73 @@ export default function ChatPage() {
     h1: ({ node, ...props }) => <h1 className="text-3xl font-extrabold mb-4 mt-6" {...props} />,
     h2: ({ node, ...props }) => <h2 className="text-2xl font-bold mb-3 mt-5" {...props} />,
     h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mb-2 mt-4" {...props} />,
-    p: ({ node, children, ...props }) => {
-      // Convert children to array for easier processing
-      const childrenArray = React.Children.toArray(children);
+    // p: ({ node, children, ...props }) => {
+    //   // Convert children to array for easier processing
+    //   const childrenArray = React.Children.toArray(children);
       
-      // If this paragraph contains a single code block, render just the code block
-      if (childrenArray.length === 1) {
-        const child = childrenArray[0];
-        if (React.isValidElement(child) && child.type === 'code') {
-          const codeProps = child.props as CodeProps;
-          if (!codeProps.inline) {
-            const match = /language-(\w+)/.exec(codeProps.className || '');
-            const language = match ? match[1] : '';
-            return (
-              <div className="my-4">
-                <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto text-sm shadow-md">
-                  {language && (
-                    <div className="text-xs text-gray-400 mb-2">
-                      {language}
-                    </div>
-                  )}
-                  <code className={`language-${language} block whitespace-pre-wrap break-words`}>
-                    {codeProps.children}
-                  </code>
-                </pre>
-              </div>
-            );
-          }
-        }
-      }
+    //   // If this paragraph contains a single code block, render just the code block
+    //   if (childrenArray.length === 1) {
+    //     const child = childrenArray[0];
+    //     if (React.isValidElement(child) && child.type === 'code') {
+    //       const codeProps = child.props as CodeProps;
+    //       if (!codeProps.inline) {
+    //         const match = /language-(\w+)/.exec(codeProps.className || '');
+    //         const language = match ? match[1] : '';
+    //         return (
+    //           <div className="my-4">
+    //             <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto text-sm shadow-md">
+    //               {language && (
+    //                 <div className="text-xs text-gray-400 mb-2">
+    //                   {language}
+    //                 </div>
+    //               )}
+    //               <code className={`language-${language} block whitespace-pre-wrap break-words`}>
+    //                 {codeProps.children}
+    //               </code>
+    //             </pre>
+    //           </div>
+    //         );
+    //       }
+    //     }
+    //   }
 
-      // For regular paragraphs, render as p
-      return <p className="mb-4 text-base leading-relaxed" {...props}>{children}</p>;
-    },
+    //   // For regular paragraphs, render as p
+    //   return <p className="mb-4 text-base leading-relaxed" {...props}>{children}</p>;
+    // },
+    p: ({ node, children, ...props }) => {
+  const childrenArray = React.Children.toArray(children);
+
+  // Keep this block for code blocks...
+  if (childrenArray.length === 1) {
+    const child = childrenArray[0];
+    if (React.isValidElement(child) && child.type === 'code') {
+      const codeProps = child.props as CodeProps;
+      if (!codeProps.inline) {
+        const match = /language-(\w+)/.exec(codeProps.className || '');
+        const language = match ? match[1] : '';
+        return (
+          <div className="my-4">
+            <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto text-sm shadow-md">
+              {language && (
+                <div className="text-xs text-gray-400 mb-2">
+                  {language}
+                </div>
+              )}
+              <code className={`language-${language} block whitespace-pre-wrap break-words`}>
+                {codeProps.children}
+              </code>
+            </pre>
+          </div>
+        );
+      }
+    }
+  }
+
+  // ✅ Safely render full paragraph with children (including colons)
+  return <p className="mb-4 text-base leading-relaxed" {...props}>{children}</p>;
+},
+
+    
     a: ({ node, ...props }) => (
       <a className="text-blue-600 underline hover:text-blue-800 transition font-medium" {...props} />
     ),
@@ -939,8 +973,8 @@ export default function ChatPage() {
             // }}
           >
           <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="login">Automate</TabsTrigger>
-              <TabsTrigger value="register">Manual</TabsTrigger>
+              <TabsTrigger value="login">Flight Info</TabsTrigger>
+              <TabsTrigger value="register">Trip Planner</TabsTrigger>
             </TabsList>
             </Tabs>
               <div className="flex-1 overflow-y-auto p-4" ref={chatBoxRef}>
@@ -1062,7 +1096,7 @@ export default function ChatPage() {
                                           remarkPlugins={[remarkGfm]}
                                           rehypePlugins={[rehypeRaw]}
                                           components={markdownComponents}
-                                          skipHtml={true}
+                                          skipHtml={false}
                                           unwrapDisallowed={true}
                                           allowedElements={[
                                             'h1', 'h2', 'h3', 'h4', 'h5', 'h6',

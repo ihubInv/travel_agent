@@ -1,6 +1,7 @@
-import { NextRequest, NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
+   const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const searchParams = request.nextUrl.searchParams
   const code = searchParams.get("code")
   
@@ -55,7 +56,7 @@ export async function GET(request: NextRequest) {
     }
     
     // Call your backend API to authenticate the user
-    const authResponse = await fetch("http://localhost:5000/api/google-login", {
+    const authResponse = await fetch(`${API_URL}/api/google-login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
