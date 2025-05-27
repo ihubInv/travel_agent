@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/ihubInv/travel_agent.git', credentialsId: 'github-creds-id'
+                git branch: 'main', url: 'https://github.com/ihubInv/travel_agent.git', credentialsId: 'github-token'
             }
         }
 
