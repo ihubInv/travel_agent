@@ -1,2 +1,5 @@
 .env
 .myenv
+token.json
+credentials.json
+credentials

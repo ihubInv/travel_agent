@@ -87,6 +87,7 @@ export default function LoginClientComponent() {
   }, [searchParams])
 
   const handleSubmit = async (e: React.FormEvent) => {
+    debugger
     e.preventDefault()
     setError("")
     setIsLoading(true)

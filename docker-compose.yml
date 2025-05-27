@@ -4,19 +4,24 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: funny_mendel  # Correct indentation
+    image: genaiihub24/my-docker:backend-app
+    container_name: funny_mendel
     ports:
       - "5000:5000"
     restart: always
-    environment:
-      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
+    volumes:
+      - ./credentials:/app/credentials
+      - ./.env:/app/.env
     networks:
       - app-network
 
   frontend:
     build:
       context: ./frontend
-    container_name: practical_tesla  # Correct indentation
+    image: genaiihub24/my-docker:frontend-app
+    container_name: practical_tesla
     ports:
       - "3000:3000"
     depends_on:
@@ -28,3 +33,88 @@ services:
 networks:
   app-network:
     driver: bridge
+
+
+
+
+
+
+# version: '3.8'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#     image: genaiihub24/my-docker:backend-app  # Tag for Docker Hub
+#     container_name: funny_mendel
+#     ports:
+#       - "5000:5000"
+#     restart: always
+#     environment:
+#       - PYTHONUNBUFFERED=1
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#     image: genaiihub24/my-docker:frontend-app # Tag for Docker Hub
+#     container_name: practical_tesla
+#     ports:
+#       - "3000:3000"
+#     depends_on:
+#       - backend
+#     restart: always
+#     networks:
+#       - app-network
+
+# networks:
+#   app-network:
+#     driver: bridge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# version: '3.8'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#     container_name: funny_mendel  # Correct indentation
+#     ports:
+#       - "5000:5000"
+#     restart: always
+#     environment:
+#       - PYTHONUNBUFFERED=1
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#     container_name: practical_tesla  # Correct indentation
+#     ports:
+#       - "3000:3000"
+#     depends_on:
+#       - backend
+#     restart: always
+#     networks:
+#       - app-network
+
+# networks:
+#   app-network:
+#     driver: bridge

@@ -84,10 +84,10 @@ async def home(request: Request):
   
 
 # route for login and register
-app.include_router(auth_router, prefix="/auth", tags=["auth"])
+app.include_router(auth_router, prefix="/api/auth", tags=["api/auth"])
 
 
-@app.post("/api/chats")
+@app.post("/api/chat")
 async def chat(request: ChatRequest, background_tasks: BackgroundTasks):
     """Process chat messages and return agent responses."""
     request_start_time = datetime.now()

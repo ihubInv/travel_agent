@@ -60,7 +60,7 @@ class FlightSearchPlugin:
 
 
     async def serper_search(self, query):
-        """Perform web search using Serper API and return top 3 results"""
+        """Perform web search using Serper API and return up to 3 valid results with title, snippet, and link"""
         try:
             url = "https://google.serper.dev/search"
             headers = {
@@ -68,24 +68,37 @@ class FlightSearchPlugin:
                 "Content-Type": "application/json"
             }
             payload = {"q": query}
-            
+
             response = requests.post(url, headers=headers, json=payload)
             if response.status_code == 200:
                 data = response.json()
-                results = data.get("organic", [])[:3]  # Get top 3 organic results
-                
+                results = data.get("organic", [])
+
                 top_results = []
-                for idx, item in enumerate(results, start=1):
-                    title = item.get("title", "No Title")
-                    link = item.get("link", "No Link")
-                    snippet = item.get("snippet", "")
-                    top_results.append(f"{idx}. {title}\n{snippet}\n{link}")
-                
-                return "\n\n".join(top_results) if top_results else "No results found."
+                for item in results:
+                    title = item.get("title", "").strip()
+                    snippet = item.get("snippet", "").strip()
+                    link = item.get("link", "").strip()
+
+                    # Skip if any of the required fields are missing
+                    if not (title and snippet and link):
+                        continue
+
+                    index = len(top_results) + 1
+                    top_results.append(f"{index}. {title}\n{snippet}\n{link}")
+
+                    if len(top_results) == 3:
+                        break
+
+                if top_results:
+                    return "\n\n".join(top_results)
+                else:
+                    return "No valid results with title, snippet, and link found."
             else:
                 return f"❌ Serper API error: {response.status_code}"
         except Exception as e:
             return f"❌ Error: {str(e)}"
+
 
     @kernel_function(description="Handle user greetings with appropriate responses")
     async def getGreetingResponse(self, query: str) -> str:

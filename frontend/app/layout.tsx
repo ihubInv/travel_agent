@@ -1,5 +1,5 @@
-
 import { AuthProvider } from '@/components/auth-provider'
+import FooterYear from '@/components/footer-year'
 import GoogleSignInScript from '@/components/google-signin-script'
 import NavBar from '@/components/nav-bar'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -43,7 +43,7 @@ export default function RootLayout({
                   <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:h-16">
                     <div className="text-center md:text-left">
                       <p className="text-sm text-muted-foreground">
-                        &copy; {new Date().getFullYear()} FlightAI. All rights reserved.
+                        &copy; <FooterYear /> FlightAI. All rights reserved.
                       </p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -64,5 +64,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-import './globals.css'

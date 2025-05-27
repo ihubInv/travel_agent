@@ -382,10 +382,10 @@
 
 "use client"
 
-import React, { useEffect, useRef, useState, KeyboardEvent } from 'react';
-import { Plane, Send, Loader2, RotateCcw } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/components/auth-provider";
+import { AnimatePresence, motion } from "framer-motion";
+import { Plane } from "lucide-react";
+import { KeyboardEvent, useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 interface Message {
@@ -589,7 +589,7 @@ export default function ChatPage() {
                     : 'bg-gradient-to-r from-muted to-muted/90'
                 }`}>
                   {msg.type === 'bot' ? (
-                    <ReactMarkdown className="prose prose-sm dark:prose-invert max-w-none">
+                    <ReactMarkdown >
                       {parsedMessage}
                     </ReactMarkdown>
                   ) : (

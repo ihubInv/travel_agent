@@ -64901,3 +64901,484 @@ Traceback (most recent call last):
   File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
     signal.raise_signal(captured_signal)
 KeyboardInterrupt
+2025-05-22 10:39:27,778 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-22 10:39:27,882 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-22 10:39:27,889 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-22 10:39:27,922 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-22 10:40:11,792 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-22 10:40:11,861 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-22 10:40:11,866 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-22 10:40:11,887 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-22 10:40:12,185 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-22 10:40:12,228 - INFO - [flight_booking.py:552] - <module>() - Starting Uvicorn server on 0.0.0.0:5000 with 1 workers
+2025-05-22 10:40:12,279 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-22 10:40:18,277 - INFO - [db.py:44] - connect_to_mongo() - MongoDB connected and indexes created
+2025-05-22 10:40:18,278 - INFO - [flight_booking.py:46] - lifespan() - Application startup complete
+2025-05-22 10:41:03,661 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-2b6ed9d5] All sessions list requested
+2025-05-22 10:41:03,661 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-2b6ed9d5] Loading session data from chat-history.json
+2025-05-22 10:41:03,662 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-2b6ed9d5] Retrieved 1 sessions
+2025-05-22 10:41:03,665 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-4fb1da88] All sessions list requested
+2025-05-22 10:41:03,666 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-4fb1da88] Loading session data from chat-history.json
+2025-05-22 10:41:03,667 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-4fb1da88] Retrieved 1 sessions
+2025-05-22 10:41:03,676 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-e7a746c2] Fetching chat history for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-22 10:41:03,677 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-e7a746c2] Retrieved 4 messages for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-22 10:41:03,680 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-68de3c50] Fetching chat history for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-22 10:41:03,681 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-68de3c50] Retrieved 4 messages for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-22 10:41:27,794 - INFO - [flight_booking.py:260] - new_chat() - [REQ-10fc6f93] New chat session requested
+2025-05-22 10:41:27,794 - DEBUG - [flight_booking.py:264] - new_chat() - [REQ-10fc6f93] Generated session ID: 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,795 - DEBUG - [logger.py:67] - wrapper() - ENTER ASYNC: create_agent_group_chat
+2025-05-22 10:41:27,795 - INFO - [agentic_function.py:173] - create_agent_group_chat() - Creating agent group chat for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,795 - DEBUG - [logger.py:50] - wrapper() - ENTER: create_kernel
+2025-05-22 10:41:27,796 - DEBUG - [agentic_function.py:74] - create_kernel() - Creating new Semantic Kernel instance
+2025-05-22 10:41:27,796 - DEBUG - [agentic_function.py:81] - create_kernel() - Adding FlightSearchPlugin to kernel
+2025-05-22 10:41:27,796 - INFO - [flightplugin2.py:59] - __init__() - FlightSearchPlugin initialized.
+2025-05-22 10:41:27,799 - DEBUG - [agentic_function.py:85] - create_kernel() - Adding OllamaChatCompletion service to kernel
+2025-05-22 10:41:27,814 - INFO - [agentic_function.py:96] - create_kernel() - Kernel created successfully
+2025-05-22 10:41:27,814 - DEBUG - [logger.py:53] - wrapper() - EXIT: create_kernel - Success
+2025-05-22 10:41:27,815 - DEBUG - [agentic_function.py:178] - create_agent_group_chat() - Creating TravelManagerAgent
+2025-05-22 10:41:27,815 - DEBUG - [agentic_function.py:184] - create_agent_group_chat() - Creating FlightInfoAgent
+2025-05-22 10:41:27,816 - DEBUG - [agentic_function.py:191] - create_agent_group_chat() - Creating FlightCancelAgent
+2025-05-22 10:41:27,817 - DEBUG - [agentic_function.py:199] - create_agent_group_chat() - Creating RouterAgent
+2025-05-22 10:41:27,817 - DEBUG - [agentic_function.py:206] - create_agent_group_chat() - Creating ValidatorAgent
+2025-05-22 10:41:27,818 - DEBUG - [agentic_function.py:213] - create_agent_group_chat() - Creating AirportSearchAgent
+2025-05-22 10:41:27,818 - DEBUG - [agentic_function.py:220] - create_agent_group_chat() - Creating FlightSearchAgent
+2025-05-22 10:41:27,819 - DEBUG - [agentic_function.py:227] - create_agent_group_chat() - Creating FlightBookAgent
+2025-05-22 10:41:27,819 - DEBUG - [agentic_function.py:235] - create_agent_group_chat() - Creating ExceptionAgent
+2025-05-22 10:41:27,820 - DEBUG - [agentic_function.py:242] - create_agent_group_chat() - Creating RagAgent
+2025-05-22 10:41:27,820 - DEBUG - [agentic_function.py:249] - create_agent_group_chat() - Creating GreetingAgent
+2025-05-22 10:41:27,820 - DEBUG - [agentic_function.py:257] - create_agent_group_chat() - Creating selection function
+2025-05-22 10:41:27,822 - DEBUG - [agentic_function.py:275] - create_agent_group_chat() - Creating termination function
+2025-05-22 10:41:27,823 - DEBUG - [agentic_function.py:318] - create_agent_group_chat() - Raw selection result: TravelManagerAgent
+2025-05-22 10:41:27,823 - DEBUG - [agentic_function.py:332] - create_agent_group_chat() - Creating the AgentGroupChat
+2025-05-22 10:41:27,824 - DEBUG - [agentic_function.py:342] - create_agent_group_chat() - Adding system message: Travel booking conversation started at 2025-05-22 10:41.
+2025-05-22 10:41:27,824 - INFO - [agent_chat.py:117] - add_chat_messages() - Adding `1` agent chat messages
+2025-05-22 10:41:27,825 - INFO - [agentic_function.py:345] - create_agent_group_chat() - Agent group chat created successfully for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,825 - DEBUG - [logger.py:70] - wrapper() - EXIT ASYNC: create_agent_group_chat - Success
+2025-05-22 10:41:27,825 - INFO - [flight_booking.py:270] - new_chat() - [REQ-10fc6f93] Chat session initialized in 0.03s
+2025-05-22 10:41:27,825 - DEBUG - [flight_booking.py:277] - new_chat() - [REQ-10fc6f93] Saving empty chat history
+2025-05-22 10:41:27,825 - DEBUG - [logger.py:50] - wrapper() - ENTER: save_chat_history
+2025-05-22 10:41:27,826 - DEBUG - [agentic_function.py:130] - save_chat_history() - Saving chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,827 - INFO - [agentic_function.py:146] - save_chat_history() - Chat history saved for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,827 - DEBUG - [logger.py:53] - wrapper() - EXIT: save_chat_history - Success
+2025-05-22 10:41:27,827 - INFO - [flight_booking.py:287] - new_chat() - [REQ-10fc6f93] New chat session created: 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:27,831 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-1275cbf5] All sessions list requested
+2025-05-22 10:41:27,832 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-1275cbf5] Loading session data from chat-history.json
+2025-05-22 10:41:27,832 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-1275cbf5] Retrieved 2 sessions
+2025-05-22 10:41:59,317 - INFO - [flight_booking.py:96] - chat() - [REQ-949eb193] Chat request received
+2025-05-22 10:41:59,318 - DEBUG - [flight_booking.py:102] - chat() - [REQ-949eb193] Request data: session_id=4911a06b-5114-4619-8bea-8cee3457fad0, message_length=32
+2025-05-22 10:41:59,318 - INFO - [flight_booking.py:113] - chat() - [REQ-949eb193] Session 4911a06b-5114-4619-8bea-8cee3457fad0 - User: tell me travel advisory to syria
+2025-05-22 10:41:59,318 - DEBUG - [flight_booking.py:117] - chat() - [REQ-949eb193] Loading chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,319 - DEBUG - [logger.py:50] - wrapper() - ENTER: load_chat_history
+2025-05-22 10:41:59,319 - DEBUG - [agentic_function.py:155] - load_chat_history() - Loading chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,319 - DEBUG - [agentic_function.py:161] - load_chat_history() - Loaded 0 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,320 - DEBUG - [logger.py:53] - wrapper() - EXIT: load_chat_history - Success
+2025-05-22 10:41:59,320 - DEBUG - [flight_booking.py:125] - chat() - [REQ-949eb193] Saving updated chat history with user message
+2025-05-22 10:41:59,320 - DEBUG - [logger.py:50] - wrapper() - ENTER: save_chat_history
+2025-05-22 10:41:59,321 - DEBUG - [agentic_function.py:130] - save_chat_history() - Saving chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,323 - INFO - [agentic_function.py:146] - save_chat_history() - Chat history saved for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,323 - DEBUG - [logger.py:53] - wrapper() - EXIT: save_chat_history - Success
+2025-05-22 10:41:59,324 - DEBUG - [logger.py:67] - wrapper() - ENTER ASYNC: get_chat_response
+2025-05-22 10:41:59,324 - INFO - [agentic_function.py:355] - get_chat_response() - Processing chat request for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,325 - DEBUG - [agentic_function.py:356] - get_chat_response() - User input: tell me travel advisory to syria
+2025-05-22 10:41:59,325 - INFO - [agentic_function.py:361] - get_chat_response() - No active chat found for session 4911a06b-5114-4619-8bea-8cee3457fad0. Creating new chat.
+2025-05-22 10:41:59,325 - DEBUG - [logger.py:67] - wrapper() - ENTER ASYNC: create_agent_group_chat
+2025-05-22 10:41:59,326 - INFO - [agentic_function.py:173] - create_agent_group_chat() - Creating agent group chat for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,326 - DEBUG - [logger.py:50] - wrapper() - ENTER: create_kernel
+2025-05-22 10:41:59,326 - DEBUG - [agentic_function.py:74] - create_kernel() - Creating new Semantic Kernel instance
+2025-05-22 10:41:59,326 - DEBUG - [agentic_function.py:81] - create_kernel() - Adding FlightSearchPlugin to kernel
+2025-05-22 10:41:59,326 - INFO - [flightplugin2.py:59] - __init__() - FlightSearchPlugin initialized.
+2025-05-22 10:41:59,328 - DEBUG - [agentic_function.py:85] - create_kernel() - Adding OllamaChatCompletion service to kernel
+2025-05-22 10:41:59,344 - INFO - [agentic_function.py:96] - create_kernel() - Kernel created successfully
+2025-05-22 10:41:59,344 - DEBUG - [logger.py:53] - wrapper() - EXIT: create_kernel - Success
+2025-05-22 10:41:59,344 - DEBUG - [agentic_function.py:178] - create_agent_group_chat() - Creating TravelManagerAgent
+2025-05-22 10:41:59,345 - DEBUG - [agentic_function.py:184] - create_agent_group_chat() - Creating FlightInfoAgent
+2025-05-22 10:41:59,346 - DEBUG - [agentic_function.py:191] - create_agent_group_chat() - Creating FlightCancelAgent
+2025-05-22 10:41:59,346 - DEBUG - [agentic_function.py:199] - create_agent_group_chat() - Creating RouterAgent
+2025-05-22 10:41:59,347 - DEBUG - [agentic_function.py:206] - create_agent_group_chat() - Creating ValidatorAgent
+2025-05-22 10:41:59,347 - DEBUG - [agentic_function.py:213] - create_agent_group_chat() - Creating AirportSearchAgent
+2025-05-22 10:41:59,347 - DEBUG - [agentic_function.py:220] - create_agent_group_chat() - Creating FlightSearchAgent
+2025-05-22 10:41:59,348 - DEBUG - [agentic_function.py:227] - create_agent_group_chat() - Creating FlightBookAgent
+2025-05-22 10:41:59,348 - DEBUG - [agentic_function.py:235] - create_agent_group_chat() - Creating ExceptionAgent
+2025-05-22 10:41:59,349 - DEBUG - [agentic_function.py:242] - create_agent_group_chat() - Creating RagAgent
+2025-05-22 10:41:59,349 - DEBUG - [agentic_function.py:249] - create_agent_group_chat() - Creating GreetingAgent
+2025-05-22 10:41:59,350 - DEBUG - [agentic_function.py:257] - create_agent_group_chat() - Creating selection function
+2025-05-22 10:41:59,351 - DEBUG - [agentic_function.py:275] - create_agent_group_chat() - Creating termination function
+2025-05-22 10:41:59,352 - DEBUG - [agentic_function.py:318] - create_agent_group_chat() - Raw selection result: TravelManagerAgent
+2025-05-22 10:41:59,352 - DEBUG - [agentic_function.py:332] - create_agent_group_chat() - Creating the AgentGroupChat
+2025-05-22 10:41:59,352 - DEBUG - [agentic_function.py:342] - create_agent_group_chat() - Adding system message: Travel booking conversation started at 2025-05-22 10:41.
+2025-05-22 10:41:59,353 - INFO - [agent_chat.py:117] - add_chat_messages() - Adding `1` agent chat messages
+2025-05-22 10:41:59,353 - INFO - [agentic_function.py:345] - create_agent_group_chat() - Agent group chat created successfully for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:41:59,353 - DEBUG - [logger.py:70] - wrapper() - EXIT ASYNC: create_agent_group_chat - Success
+2025-05-22 10:41:59,353 - DEBUG - [agentic_function.py:367] - get_chat_response() - Adding user message to chat: tell me travel advisory to syria
+2025-05-22 10:41:59,353 - INFO - [agent_chat.py:117] - add_chat_messages() - Adding `1` agent chat messages
+2025-05-22 10:41:59,354 - DEBUG - [agentic_function.py:374] - get_chat_response() - Invoking chat to generate responses
+2025-05-22 10:41:59,354 - INFO - [agent_chat.py:144] - invoke_agent() - Invoking agent TravelManagerAgent
+2025-05-22 10:42:01,727 - INFO - [_client.py:1740] - _send_single_request() - HTTP Request: POST http://115.241.186.203/api/chat "HTTP/1.1 200 OK"
+2025-05-22 10:42:01,731 - INFO - [chat_completion_client_base.py:149] - get_chat_message_contents() - processing 1 tool calls in parallel.
+2025-05-22 10:42:01,732 - INFO - [kernel.py:386] - invoke_function_call() - Calling flight-getRAGResponse function with args: {'query': 'travel advisory to syria'}
+2025-05-22 10:42:01,736 - INFO - [kernel_function_log_messages.py:19] - log_function_invoking() - Function flight-getRAGResponse invoking.
+2025-05-22 10:42:01,737 - INFO - [flightplugin2.py:238] - getRAGResponse() - RAG Agent processing query: travel advisory to syria
+2025-05-22 10:42:03,876 - INFO - [flightplugin2.py:251] - getRAGResponse() - RAG Agent processing query: 1. Syria Travel Advisory - Travel.gov
+Do not travel to Syria due to the risk of terrorism, civil unrest, kidnapping, hostage taking, armed conflict, and unjust detention. Country ...
+https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/syria-travel-advisory.html
+
+2. Syria International Travel Information
+The Travel Advisory for Syria is Level 4, Do Not Travel. The Department of State recommends U.S. citizens do not travel to Syria due to the risk of terrorism, ...
+https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/SyrianArabRepublic.html
+
+3. Security Alert: U.S. Citizens in Syria
+The US Department of State's Travel Advisory for Syria is at Level 4: Do Not Travel. This advisory remains in effect due to the significant risks of terrorism.
+https://sy.usembassy.gov/security-alert-u-s-citizens-in-syria/
+2025-05-22 10:42:03,877 - INFO - [kernel_function_log_messages.py:29] - log_function_invoked_success() - Function flight-getRAGResponse succeeded.
+2025-05-22 10:42:03,877 - INFO - [kernel_function_log_messages.py:53] - log_function_completed() - Function completed. Duration: 2.140874s
+2025-05-22 10:42:05,570 - INFO - [_client.py:1740] - _send_single_request() - HTTP Request: POST http://115.241.186.203/api/chat "HTTP/1.1 200 OK"
+2025-05-22 10:42:05,573 - INFO - [termination_strategy.py:48] - should_terminate() - Evaluating termination criteria for d9fb15d7-604e-41c9-a824-344c53325bb9
+2025-05-22 10:42:05,574 - INFO - [kernel_function_termination_strategy.py:81] - should_agent_terminate() - should_agent_terminate, function invoking: `termination`
+2025-05-22 10:42:05,574 - INFO - [kernel_function_log_messages.py:19] - log_function_invoking() - Function termination invoking.
+2025-05-22 10:42:06,645 - INFO - [_client.py:1740] - _send_single_request() - HTTP Request: POST http://115.241.186.203/api/chat "HTTP/1.1 200 OK"
+2025-05-22 10:42:06,646 - INFO - [kernel_function_log_messages.py:29] - log_function_invoked_success() - Function termination succeeded.
+2025-05-22 10:42:06,646 - INFO - [kernel_function_log_messages.py:53] - log_function_completed() - Function completed. Duration: 1.071750s
+2025-05-22 10:42:06,647 - INFO - [kernel_function_termination_strategy.py:91] - should_agent_terminate() - should_agent_terminate, function `termination` invoked with result `[ChatMessageContent(inner_content=ChatResponse(model='llama3.1:8b', created_at='2025-05-22T05:12:06.4898781Z', done=True, done_reason='stop', total_duration=997202615, load_duration=18884902, prompt_eval_count=437, prompt_eval_duration=11000000, eval_count=133, eval_duration=966000000, message=Message(role='assistant', content='The conversation is not complete.\n\nAlthough the assistant provided a detailed travel advisory for Syria, there are no indications that the user\'s query about traveling to Syria was fully addressed or that they are satisfied with the information provided. The user did not express any interest in booking flights or accommodations, and there is no mention of confirming a booking.\n\nThe conversation only consisted of one exchange between the user and the assistant, where the assistant provided general travel advice for Syria without addressing any specific needs or questions from the user. As such, additional agent collaboration would be required to determine if the user\'s query has been fully addressed. \n\nTherefore, the response should be: "continue".', images=None, tool_calls=None)), ai_model_id='llama3.1:8b', metadata={'model': 'llama3.1:8b', 'usage': CompletionUsage(prompt_tokens=437, completion_tokens=133)}, content_type='message', role=<AuthorRole.ASSISTANT: 'assistant'>, name=None, items=[TextContent(inner_content=Message(role='assistant', content='The conversation is not complete.\n\nAlthough the assistant provided a detailed travel advisory for Syria, there are no indications that the user\'s query about traveling to Syria was fully addressed or that they are satisfied with the information provided. The user did not express any interest in booking flights or accommodations, and there is no mention of confirming a booking.\n\nThe conversation only consisted of one exchange between the user and the assistant, where the assistant provided general travel advice for Syria without addressing any specific needs or questions from the user. As such, additional agent collaboration would be required to determine if the user\'s query has been fully addressed. \n\nTherefore, the response should be: "continue".', images=None, tool_calls=None), ai_model_id=None, metadata={}, content_type='text', text='The conversation is not complete.\n\nAlthough the assistant provided a detailed travel advisory for Syria, there are no indications that the user\'s query about traveling to Syria was fully addressed or that they are satisfied with the information provided. The user did not express any interest in booking flights or accommodations, and there is no mention of confirming a booking.\n\nThe conversation only consisted of one exchange between the user and the assistant, where the assistant provided general travel advice for Syria without addressing any specific needs or questions from the user. As such, additional agent collaboration would be required to determine if the user\'s query has been fully addressed. \n\nTherefore, the response should be: "continue".', encoding=None)], encoding=None, finish_reason=None, status=None)]`
+2025-05-22 10:42:06,648 - INFO - [termination_strategy.py:56] - should_terminate() - Evaluated criteria for d9fb15d7-604e-41c9-a824-344c53325bb9, should terminate: True
+2025-05-22 10:42:06,648 - INFO - [agentic_function.py:394] - get_chat_response() - Response received from TravelManagerAgent
+2025-05-22 10:42:06,649 - DEBUG - [agentic_function.py:395] - get_chat_response() - Response content: As a helpful assistant, I would suggest that the user exercise extreme caution and consider not traveling to Syria at all due to the high risk of terrorism, civil unrest, kidnapping, hostage taking, armed conflict, and unjust detention. The US Department of State has issued a Level 4 Travel Advisory for Syria, which advises against any travel to the country.
+
+If the user still intends to travel to Syria, I would recommend that they carefully review the security situation in the area, take necessary precautions to ensure their safety, and stay informed about local conditions through reliable sources. It's also essential to register with the US Department of State's Smart Traveler Enrollment Program (STEP) to receive important safety and security updates about Syria.
+
+Additionally, I would advise the user to check with their airline or travel provider for any specific requirements or restrictions related to traveling to Syria.
+
+Please let me know if you need further assistance.
+2025-05-22 10:42:06,649 - DEBUG - [agentic_function.py:417] - get_chat_response() - Chat response processing complete. Generated 1 responses.
+2025-05-22 10:42:06,649 - DEBUG - [logger.py:70] - wrapper() - EXIT ASYNC: get_chat_response - Success
+2025-05-22 10:42:06,650 - INFO - [flight_booking.py:141] - chat() - [REQ-949eb193] Response generated in 7.33 seconds
+2025-05-22 10:42:06,650 - DEBUG - [flight_booking.py:151] - chat() - [REQ-949eb193] Adding 1 responses to chat history
+2025-05-22 10:42:06,650 - INFO - [flight_booking.py:168] - chat() - [REQ-949eb193] Request completed in 7.33 seconds
+2025-05-22 10:42:06,651 - DEBUG - [logger.py:50] - wrapper() - ENTER: load_chat_history
+2025-05-22 10:42:06,651 - DEBUG - [agentic_function.py:155] - load_chat_history() - Loading chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:42:06,655 - DEBUG - [agentic_function.py:161] - load_chat_history() - Loaded 1 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:42:06,656 - DEBUG - [logger.py:53] - wrapper() - EXIT: load_chat_history - Success
+2025-05-22 10:42:07,590 - INFO - [flight_booking.py:174] - chat() - suggestions generated successfully['Check airline policies for Syria travel', "Enroll in US Department of State's STEP program", 'Register for emergency alerts from relevant embassies', 'Research latest security situation in Syria before travel', 'Review travel insurance options for high-risk destinations']
+2025-05-22 10:42:07,593 - DEBUG - [logger.py:50] - wrapper() - ENTER: save_chat_history
+2025-05-22 10:42:07,594 - DEBUG - [agentic_function.py:130] - save_chat_history() - Saving chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:42:07,596 - INFO - [agentic_function.py:146] - save_chat_history() - Chat history saved for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:42:07,598 - DEBUG - [logger.py:53] - wrapper() - EXIT: save_chat_history - Success
+2025-05-22 10:45:55,929 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-3bf719af] All sessions list requested
+2025-05-22 10:45:55,930 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-3bf719af] Loading session data from chat-history.json
+2025-05-22 10:45:55,930 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-3bf719af] Retrieved 2 sessions
+2025-05-22 10:45:55,933 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-2ed0beaf] All sessions list requested
+2025-05-22 10:45:55,933 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-2ed0beaf] Loading session data from chat-history.json
+2025-05-22 10:45:55,934 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-2ed0beaf] Retrieved 2 sessions
+2025-05-22 10:45:55,940 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-f4cbf06e] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:45:55,941 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-f4cbf06e] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:45:55,945 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-eb79506a] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 10:45:55,946 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-eb79506a] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-22 11:00:07,258 - INFO - [db.py:52] - close_mongo_connection() - MongoDB connection closed
+2025-05-22 11:00:07,258 - INFO - [flight_booking.py:50] - lifespan() - Application shutdown complete
+2025-05-22 11:00:07,799 - ERROR - [base_events.py:1729] - default_exception_handler() - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 315, in __wakeup
+    self.__step()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-05-27 12:10:18,257 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-27 12:10:18,455 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-27 12:10:18,471 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-27 12:10:18,510 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-27 12:10:53,545 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-27 12:10:53,627 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-27 12:10:53,634 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-27 12:10:53,659 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-27 12:10:53,942 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-27 12:10:53,987 - INFO - [flight_booking.py:552] - <module>() - Starting Uvicorn server on 0.0.0.0:5000 with 1 workers
+2025-05-27 12:10:54,045 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-27 12:10:55,522 - INFO - [db.py:44] - connect_to_mongo() - MongoDB connected and indexes created
+2025-05-27 12:10:55,522 - INFO - [flight_booking.py:46] - lifespan() - Application startup complete
+2025-05-27 12:13:29,143 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-549f5c39] All sessions list requested
+2025-05-27 12:13:29,143 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-549f5c39] Loading session data from chat-history.json
+2025-05-27 12:13:29,144 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-549f5c39] Retrieved 2 sessions
+2025-05-27 12:13:29,146 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-66a39d32] All sessions list requested
+2025-05-27 12:13:29,147 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-66a39d32] Loading session data from chat-history.json
+2025-05-27 12:13:29,147 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-66a39d32] Retrieved 2 sessions
+2025-05-27 12:13:29,167 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-8875d29e] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:13:29,168 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-8875d29e] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:13:29,175 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-79130182] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:13:29,175 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-79130182] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:13:45,996 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-a6e2b16a] All sessions list requested
+2025-05-27 12:13:45,997 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-a6e2b16a] Loading session data from chat-history.json
+2025-05-27 12:13:45,998 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-a6e2b16a] Retrieved 2 sessions
+2025-05-27 12:13:46,002 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-137df208] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:13:46,003 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-137df208] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:03,991 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-25f4fbae] All sessions list requested
+2025-05-27 12:15:03,992 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-25f4fbae] Loading session data from chat-history.json
+2025-05-27 12:15:03,993 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-25f4fbae] Retrieved 2 sessions
+2025-05-27 12:15:03,995 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-5e0be081] All sessions list requested
+2025-05-27 12:15:03,995 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-5e0be081] Loading session data from chat-history.json
+2025-05-27 12:15:03,996 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-5e0be081] Retrieved 2 sessions
+2025-05-27 12:15:03,999 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-afac2253] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:04,000 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-afac2253] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:04,011 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-9a765ab6] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:04,011 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-9a765ab6] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:07,757 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-044438aa] Fetching chat history for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-27 12:15:07,759 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-044438aa] Retrieved 4 messages for session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-27 12:15:09,506 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-5bb36aae] Fetching chat history for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:09,508 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-5bb36aae] Retrieved 2 messages for session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:17,646 - INFO - [flight_booking.py:447] - delete_session() - [REQ-cb686d5a] Delete session requested for 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:17,646 - DEBUG - [flight_booking.py:457] - delete_session() - [REQ-cb686d5a] Updating chat history file to remove session 4911a06b-5114-4619-8bea-8cee3457fad0
+2025-05-27 12:15:17,647 - INFO - [flight_booking.py:467] - delete_session() - [REQ-cb686d5a] Session 4911a06b-5114-4619-8bea-8cee3457fad0 deleted successfully
+2025-05-27 12:15:19,710 - INFO - [flight_booking.py:447] - delete_session() - [REQ-b608efe4] Delete session requested for f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-27 12:15:19,710 - DEBUG - [flight_booking.py:457] - delete_session() - [REQ-b608efe4] Updating chat history file to remove session f67391e8-1f0a-40f8-815b-e170fdae16f6
+2025-05-27 12:15:19,712 - INFO - [flight_booking.py:467] - delete_session() - [REQ-b608efe4] Session f67391e8-1f0a-40f8-815b-e170fdae16f6 deleted successfully
+2025-05-27 12:15:22,737 - INFO - [flight_booking.py:260] - new_chat() - [REQ-fd0f8d37] New chat session requested
+2025-05-27 12:15:22,737 - DEBUG - [flight_booking.py:264] - new_chat() - [REQ-fd0f8d37] Generated session ID: 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,737 - DEBUG - [logger.py:67] - wrapper() - ENTER ASYNC: create_agent_group_chat
+2025-05-27 12:15:22,738 - INFO - [agentic_function.py:173] - create_agent_group_chat() - Creating agent group chat for session 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,738 - DEBUG - [logger.py:50] - wrapper() - ENTER: create_kernel
+2025-05-27 12:15:22,738 - DEBUG - [agentic_function.py:74] - create_kernel() - Creating new Semantic Kernel instance
+2025-05-27 12:15:22,738 - DEBUG - [agentic_function.py:81] - create_kernel() - Adding FlightSearchPlugin to kernel
+2025-05-27 12:15:22,738 - INFO - [flightplugin2.py:59] - __init__() - FlightSearchPlugin initialized.
+2025-05-27 12:15:22,743 - DEBUG - [agentic_function.py:85] - create_kernel() - Adding OllamaChatCompletion service to kernel
+2025-05-27 12:15:22,761 - INFO - [agentic_function.py:96] - create_kernel() - Kernel created successfully
+2025-05-27 12:15:22,761 - DEBUG - [logger.py:53] - wrapper() - EXIT: create_kernel - Success
+2025-05-27 12:15:22,761 - DEBUG - [agentic_function.py:178] - create_agent_group_chat() - Creating TravelManagerAgent
+2025-05-27 12:15:22,762 - DEBUG - [agentic_function.py:184] - create_agent_group_chat() - Creating FlightInfoAgent
+2025-05-27 12:15:22,762 - DEBUG - [agentic_function.py:191] - create_agent_group_chat() - Creating FlightCancelAgent
+2025-05-27 12:15:22,763 - DEBUG - [agentic_function.py:199] - create_agent_group_chat() - Creating RouterAgent
+2025-05-27 12:15:22,763 - DEBUG - [agentic_function.py:206] - create_agent_group_chat() - Creating ValidatorAgent
+2025-05-27 12:15:22,763 - DEBUG - [agentic_function.py:213] - create_agent_group_chat() - Creating AirportSearchAgent
+2025-05-27 12:15:22,764 - DEBUG - [agentic_function.py:220] - create_agent_group_chat() - Creating FlightSearchAgent
+2025-05-27 12:15:22,765 - DEBUG - [agentic_function.py:227] - create_agent_group_chat() - Creating FlightBookAgent
+2025-05-27 12:15:22,765 - DEBUG - [agentic_function.py:235] - create_agent_group_chat() - Creating ExceptionAgent
+2025-05-27 12:15:22,766 - DEBUG - [agentic_function.py:242] - create_agent_group_chat() - Creating RagAgent
+2025-05-27 12:15:22,766 - DEBUG - [agentic_function.py:249] - create_agent_group_chat() - Creating GreetingAgent
+2025-05-27 12:15:22,767 - DEBUG - [agentic_function.py:257] - create_agent_group_chat() - Creating selection function
+2025-05-27 12:15:22,768 - DEBUG - [agentic_function.py:275] - create_agent_group_chat() - Creating termination function
+2025-05-27 12:15:22,769 - DEBUG - [agentic_function.py:318] - create_agent_group_chat() - Raw selection result: TravelManagerAgent
+2025-05-27 12:15:22,769 - DEBUG - [agentic_function.py:332] - create_agent_group_chat() - Creating the AgentGroupChat
+2025-05-27 12:15:22,770 - DEBUG - [agentic_function.py:342] - create_agent_group_chat() - Adding system message: Travel booking conversation started at 2025-05-27 12:15.
+2025-05-27 12:15:22,771 - INFO - [agent_chat.py:117] - add_chat_messages() - Adding `1` agent chat messages
+2025-05-27 12:15:22,771 - INFO - [agentic_function.py:345] - create_agent_group_chat() - Agent group chat created successfully for session 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,771 - DEBUG - [logger.py:70] - wrapper() - EXIT ASYNC: create_agent_group_chat - Success
+2025-05-27 12:15:22,771 - INFO - [flight_booking.py:270] - new_chat() - [REQ-fd0f8d37] Chat session initialized in 0.03s
+2025-05-27 12:15:22,771 - DEBUG - [flight_booking.py:277] - new_chat() - [REQ-fd0f8d37] Saving empty chat history
+2025-05-27 12:15:22,772 - DEBUG - [logger.py:50] - wrapper() - ENTER: save_chat_history
+2025-05-27 12:15:22,772 - DEBUG - [agentic_function.py:130] - save_chat_history() - Saving chat history for session 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,772 - INFO - [agentic_function.py:146] - save_chat_history() - Chat history saved for session 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,773 - DEBUG - [logger.py:53] - wrapper() - EXIT: save_chat_history - Success
+2025-05-27 12:15:22,773 - INFO - [flight_booking.py:287] - new_chat() - [REQ-fd0f8d37] New chat session created: 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:22,776 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-b1bef10f] All sessions list requested
+2025-05-27 12:15:22,777 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-b1bef10f] Loading session data from chat-history.json
+2025-05-27 12:15:22,777 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-b1bef10f] Retrieved 1 sessions
+2025-05-27 12:15:25,758 - INFO - [flight_booking.py:447] - delete_session() - [REQ-691a44c9] Delete session requested for 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:25,759 - DEBUG - [flight_booking.py:457] - delete_session() - [REQ-691a44c9] Updating chat history file to remove session 86776c1e-9662-4ed5-9869-db5dd31bbcc8
+2025-05-27 12:15:25,760 - INFO - [flight_booking.py:467] - delete_session() - [REQ-691a44c9] Session 86776c1e-9662-4ed5-9869-db5dd31bbcc8 deleted successfully
+2025-05-27 12:15:33,723 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-f73b3154] All sessions list requested
+2025-05-27 12:15:33,724 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-f73b3154] Loading session data from chat-history.json
+2025-05-27 12:15:33,724 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-f73b3154] Retrieved 0 sessions
+2025-05-27 12:15:33,756 - INFO - [flight_booking.py:260] - new_chat() - [REQ-b915a8be] New chat session requested
+2025-05-27 12:15:33,756 - DEBUG - [flight_booking.py:264] - new_chat() - [REQ-b915a8be] Generated session ID: ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,756 - DEBUG - [logger.py:67] - wrapper() - ENTER ASYNC: create_agent_group_chat
+2025-05-27 12:15:33,756 - INFO - [agentic_function.py:173] - create_agent_group_chat() - Creating agent group chat for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,757 - DEBUG - [logger.py:50] - wrapper() - ENTER: create_kernel
+2025-05-27 12:15:33,757 - DEBUG - [agentic_function.py:74] - create_kernel() - Creating new Semantic Kernel instance
+2025-05-27 12:15:33,757 - DEBUG - [agentic_function.py:81] - create_kernel() - Adding FlightSearchPlugin to kernel
+2025-05-27 12:15:33,757 - INFO - [flightplugin2.py:59] - __init__() - FlightSearchPlugin initialized.
+2025-05-27 12:15:33,760 - DEBUG - [agentic_function.py:85] - create_kernel() - Adding OllamaChatCompletion service to kernel
+2025-05-27 12:15:33,776 - INFO - [agentic_function.py:96] - create_kernel() - Kernel created successfully
+2025-05-27 12:15:33,776 - DEBUG - [logger.py:53] - wrapper() - EXIT: create_kernel - Success
+2025-05-27 12:15:33,776 - DEBUG - [agentic_function.py:178] - create_agent_group_chat() - Creating TravelManagerAgent
+2025-05-27 12:15:33,777 - DEBUG - [agentic_function.py:184] - create_agent_group_chat() - Creating FlightInfoAgent
+2025-05-27 12:15:33,778 - DEBUG - [agentic_function.py:191] - create_agent_group_chat() - Creating FlightCancelAgent
+2025-05-27 12:15:33,778 - DEBUG - [agentic_function.py:199] - create_agent_group_chat() - Creating RouterAgent
+2025-05-27 12:15:33,779 - DEBUG - [agentic_function.py:206] - create_agent_group_chat() - Creating ValidatorAgent
+2025-05-27 12:15:33,780 - DEBUG - [agentic_function.py:213] - create_agent_group_chat() - Creating AirportSearchAgent
+2025-05-27 12:15:33,781 - DEBUG - [agentic_function.py:220] - create_agent_group_chat() - Creating FlightSearchAgent
+2025-05-27 12:15:33,781 - DEBUG - [agentic_function.py:227] - create_agent_group_chat() - Creating FlightBookAgent
+2025-05-27 12:15:33,781 - DEBUG - [agentic_function.py:235] - create_agent_group_chat() - Creating ExceptionAgent
+2025-05-27 12:15:33,782 - DEBUG - [agentic_function.py:242] - create_agent_group_chat() - Creating RagAgent
+2025-05-27 12:15:33,782 - DEBUG - [agentic_function.py:249] - create_agent_group_chat() - Creating GreetingAgent
+2025-05-27 12:15:33,783 - DEBUG - [agentic_function.py:257] - create_agent_group_chat() - Creating selection function
+2025-05-27 12:15:33,784 - DEBUG - [agentic_function.py:275] - create_agent_group_chat() - Creating termination function
+2025-05-27 12:15:33,786 - DEBUG - [agentic_function.py:318] - create_agent_group_chat() - Raw selection result: TravelManagerAgent
+2025-05-27 12:15:33,786 - DEBUG - [agentic_function.py:332] - create_agent_group_chat() - Creating the AgentGroupChat
+2025-05-27 12:15:33,787 - DEBUG - [agentic_function.py:342] - create_agent_group_chat() - Adding system message: Travel booking conversation started at 2025-05-27 12:15.
+2025-05-27 12:15:33,787 - INFO - [agent_chat.py:117] - add_chat_messages() - Adding `1` agent chat messages
+2025-05-27 12:15:33,787 - INFO - [agentic_function.py:345] - create_agent_group_chat() - Agent group chat created successfully for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,787 - DEBUG - [logger.py:70] - wrapper() - EXIT ASYNC: create_agent_group_chat - Success
+2025-05-27 12:15:33,788 - INFO - [flight_booking.py:270] - new_chat() - [REQ-b915a8be] Chat session initialized in 0.03s
+2025-05-27 12:15:33,788 - DEBUG - [flight_booking.py:277] - new_chat() - [REQ-b915a8be] Saving empty chat history
+2025-05-27 12:15:33,788 - DEBUG - [logger.py:50] - wrapper() - ENTER: save_chat_history
+2025-05-27 12:15:33,788 - DEBUG - [agentic_function.py:130] - save_chat_history() - Saving chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,789 - INFO - [agentic_function.py:146] - save_chat_history() - Chat history saved for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,790 - DEBUG - [logger.py:53] - wrapper() - EXIT: save_chat_history - Success
+2025-05-27 12:15:33,790 - INFO - [flight_booking.py:287] - new_chat() - [REQ-b915a8be] New chat session created: ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 12:15:33,838 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-4e77c946] All sessions list requested
+2025-05-27 12:15:33,839 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-4e77c946] Loading session data from chat-history.json
+2025-05-27 12:15:33,839 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-4e77c946] Retrieved 1 sessions
+2025-05-27 14:24:52,400 - INFO - [db.py:52] - close_mongo_connection() - MongoDB connection closed
+2025-05-27 14:24:52,402 - INFO - [flight_booking.py:50] - lifespan() - Application shutdown complete
+2025-05-27 14:24:53,073 - ERROR - [base_events.py:1729] - default_exception_handler() - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 315, in __wakeup
+    self.__step()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-05-27 14:25:06,073 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-27 14:25:06,128 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-27 14:25:06,136 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-27 14:25:06,161 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-27 14:25:06,432 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-27 14:25:06,475 - INFO - [flight_booking.py:552] - <module>() - Starting Uvicorn server on 0.0.0.0:5000 with 1 workers
+2025-05-27 14:25:06,522 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-27 14:25:07,425 - INFO - [db.py:44] - connect_to_mongo() - MongoDB connected and indexes created
+2025-05-27 14:25:07,425 - INFO - [flight_booking.py:46] - lifespan() - Application startup complete
+2025-05-27 14:28:14,796 - INFO - [flight_booking.py:78] - home() - Home page requested
+2025-05-27 15:03:41,850 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-d47e474a] All sessions list requested
+2025-05-27 15:03:41,853 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-d47e474a] Loading session data from chat-history.json
+2025-05-27 15:03:41,855 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-d47e474a] Retrieved 1 sessions
+2025-05-27 15:03:41,872 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-d83873f2] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:03:41,873 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-d83873f2] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,390 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-37efec93] All sessions list requested
+2025-05-27 15:04:00,390 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-37efec93] Loading session data from chat-history.json
+2025-05-27 15:04:00,390 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-37efec93] Retrieved 1 sessions
+2025-05-27 15:04:00,392 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-bb91b566] All sessions list requested
+2025-05-27 15:04:00,393 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-bb91b566] Loading session data from chat-history.json
+2025-05-27 15:04:00,393 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-bb91b566] Retrieved 1 sessions
+2025-05-27 15:04:00,626 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-6c6cefc9] All sessions list requested
+2025-05-27 15:04:00,627 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-6c6cefc9] Loading session data from chat-history.json
+2025-05-27 15:04:00,627 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-6c6cefc9] Retrieved 1 sessions
+2025-05-27 15:04:00,725 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-a811f049] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,726 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-a811f049] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,732 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-89864f9a] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,733 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-89864f9a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,879 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-dd1cf563] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:00,880 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-dd1cf563] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:30,534 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-7f959d4d] All sessions list requested
+2025-05-27 15:04:30,534 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-7f959d4d] Loading session data from chat-history.json
+2025-05-27 15:04:30,535 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-7f959d4d] Retrieved 1 sessions
+2025-05-27 15:04:30,541 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-887429a9] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:30,542 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-887429a9] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:35,964 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-32e1a0f2] All sessions list requested
+2025-05-27 15:04:35,964 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-32e1a0f2] Loading session data from chat-history.json
+2025-05-27 15:04:35,965 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-32e1a0f2] Retrieved 1 sessions
+2025-05-27 15:04:35,972 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-78392e0c] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:35,973 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-78392e0c] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:50,997 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-35109c34] All sessions list requested
+2025-05-27 15:04:50,997 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-35109c34] Loading session data from chat-history.json
+2025-05-27 15:04:50,998 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-35109c34] Retrieved 1 sessions
+2025-05-27 15:04:51,005 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-fd474fb5] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:04:51,005 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-fd474fb5] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:23,305 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-debf80ac] All sessions list requested
+2025-05-27 15:06:23,305 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-debf80ac] Loading session data from chat-history.json
+2025-05-27 15:06:23,306 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-debf80ac] Retrieved 1 sessions
+2025-05-27 15:06:23,312 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-5a7c02a6] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:23,313 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-5a7c02a6] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:36,363 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-2d38782e] All sessions list requested
+2025-05-27 15:06:36,364 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-2d38782e] Loading session data from chat-history.json
+2025-05-27 15:06:36,364 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-2d38782e] Retrieved 1 sessions
+2025-05-27 15:06:36,386 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-2d3aa9ff] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:36,387 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-2d3aa9ff] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:47,086 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-efa3beed] All sessions list requested
+2025-05-27 15:06:47,087 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-efa3beed] Loading session data from chat-history.json
+2025-05-27 15:06:47,087 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-efa3beed] Retrieved 1 sessions
+2025-05-27 15:06:47,094 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-a460a87d] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:47,094 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-a460a87d] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:49,583 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-4b76add2] All sessions list requested
+2025-05-27 15:06:49,584 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-4b76add2] Loading session data from chat-history.json
+2025-05-27 15:06:49,584 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-4b76add2] Retrieved 1 sessions
+2025-05-27 15:06:49,606 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-80afff3f] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:49,608 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-80afff3f] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:53,983 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-eb6c747f] All sessions list requested
+2025-05-27 15:06:53,984 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-eb6c747f] Loading session data from chat-history.json
+2025-05-27 15:06:53,984 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-eb6c747f] Retrieved 1 sessions
+2025-05-27 15:06:53,990 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-015940a7] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:06:53,992 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-015940a7] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:04,537 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-95176807] All sessions list requested
+2025-05-27 15:07:04,538 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-95176807] Loading session data from chat-history.json
+2025-05-27 15:07:04,539 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-95176807] Retrieved 1 sessions
+2025-05-27 15:07:04,557 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-24f0ad99] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:04,559 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-24f0ad99] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:05,571 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-3d2bb163] All sessions list requested
+2025-05-27 15:07:05,572 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-3d2bb163] Loading session data from chat-history.json
+2025-05-27 15:07:05,572 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-3d2bb163] Retrieved 1 sessions
+2025-05-27 15:07:05,587 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-99f8c449] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:05,587 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-99f8c449] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:06,892 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-83943881] All sessions list requested
+2025-05-27 15:07:06,893 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-83943881] Loading session data from chat-history.json
+2025-05-27 15:07:06,893 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-83943881] Retrieved 1 sessions
+2025-05-27 15:07:06,909 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-a50d3e74] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:06,910 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-a50d3e74] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:09,683 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-b2b3151b] All sessions list requested
+2025-05-27 15:07:09,683 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-b2b3151b] Loading session data from chat-history.json
+2025-05-27 15:07:09,684 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-b2b3151b] Retrieved 1 sessions
+2025-05-27 15:07:09,736 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-aca30426] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:09,737 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-aca30426] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:10,412 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-919400bc] All sessions list requested
+2025-05-27 15:07:10,412 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-919400bc] Loading session data from chat-history.json
+2025-05-27 15:07:10,413 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-919400bc] Retrieved 1 sessions
+2025-05-27 15:07:10,426 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-fb4b9f1b] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:10,426 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-fb4b9f1b] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:13,864 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-a88faa3e] All sessions list requested
+2025-05-27 15:07:13,865 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-a88faa3e] Loading session data from chat-history.json
+2025-05-27 15:07:13,866 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-a88faa3e] Retrieved 1 sessions
+2025-05-27 15:07:13,889 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-a36c9a8e] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:13,889 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-a36c9a8e] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:19,754 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-dc6ee70a] All sessions list requested
+2025-05-27 15:07:19,755 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-dc6ee70a] Loading session data from chat-history.json
+2025-05-27 15:07:19,756 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-dc6ee70a] Retrieved 1 sessions
+2025-05-27 15:07:19,762 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-6351ee9d] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:19,763 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-6351ee9d] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:23,256 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-548e897e] All sessions list requested
+2025-05-27 15:07:23,256 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-548e897e] Loading session data from chat-history.json
+2025-05-27 15:07:23,257 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-548e897e] Retrieved 1 sessions
+2025-05-27 15:07:23,273 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-d0b40d69] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:07:23,273 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-d0b40d69] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:15:48,567 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-0e67d679] All sessions list requested
+2025-05-27 15:15:48,567 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-0e67d679] Loading session data from chat-history.json
+2025-05-27 15:15:48,568 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-0e67d679] Retrieved 1 sessions
+2025-05-27 15:15:48,571 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-3bf35757] All sessions list requested
+2025-05-27 15:15:48,572 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-3bf35757] Loading session data from chat-history.json
+2025-05-27 15:15:48,573 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-3bf35757] Retrieved 1 sessions
+2025-05-27 15:15:48,581 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-1316242a] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:15:48,582 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-1316242a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:15:48,601 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-6d027bb8] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-27 15:15:48,603 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-6d027bb8] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137

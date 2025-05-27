@@ -246,7 +246,9 @@ const AuthContext = createContext<AuthContextType>({
 export const useAuth = () => useContext(AuthContext)
 
 // Update the API_URL to ensure it's using the correct backend URL
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL 
+// || "http://localhost:5000";
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
@@ -354,7 +356,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       console.log("Attempting login with email and password");
       
-      const response = await fetch(`${API_URL}/auth/login`, {
+      const response = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -387,7 +389,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const register = async (name: string, email: string, password: string): Promise<boolean> => {
     try {
       const request: RegisterRequest = { name, email, password };
-      const response = await fetch(`${API_URL}/auth/register`, {
+      const response = await fetch(`${API_URL}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(request),
@@ -414,7 +416,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       console.log("Attempting Google login with credential");
       
-      const response = await fetch(`${API_URL}/api/google-login`, {
+      const response = await fetch(`${API_URL}/api/auth/google-login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -448,7 +450,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       console.log("Attempting to send password reset email to:", email)
       
-      const response = await fetch(`${API_URL}/api/forgot-password`, {
+      const response = await fetch(`${API_URL}/api/auth/forgot-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -502,7 +504,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       console.log("Attempting to reset password with token")
       
-      const response = await fetch(`${API_URL}/api/reset-password`, {
+      const response = await fetch(`${API_URL}/api/auth/reset-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
