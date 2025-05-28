@@ -3,23 +3,20 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./backend
+      context: .     # ⬅️ project root
+      dockerfile: backend/Dockerfile
     image: genaiihub24/my-docker:backend-app
     container_name: funny_mendel
     ports:
       - "5000:5000"
     restart: always
-    env_file:
-      - .env
-    volumes:
-      - ./credentials:/app/credentials
-      - ./.env:/app/.env
     networks:
       - app-network
 
   frontend:
     build:
-      context: ./frontend
+      context: .
+      dockerfile: frontend/Dockerfile
     image: genaiihub24/my-docker:frontend-app
     container_name: practical_tesla
     ports:
@@ -33,6 +30,48 @@ services:
 networks:
   app-network:
     driver: bridge
+
+
+
+
+
+
+
+# version: '3.8'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#     image: genaiihub24/my-docker:backend-app
+#     container_name: funny_mendel
+#     ports:
+#       - "5000:5000"
+#     restart: always
+#     env_file:
+#       - .env
+#     volumes:
+#       - ./credentials:/app/credentials
+#       - ./.env:/app/.env
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#     image: genaiihub24/my-docker:frontend-app
+#     container_name: practical_tesla
+#     ports:
+#       - "3000:3000"
+#     depends_on:
+#       - backend
+#     restart: always
+#     networks:
+#       - app-network
+
+# networks:
+#   app-network:
+#     driver: bridge
 
 
 

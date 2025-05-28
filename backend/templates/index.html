@@ -351,7 +351,7 @@ function displaySuggestions(suggestions) {
         async function createNewSession() {
             showTypingIndicator();
             try {
-                const response = await fetch('/new-chat', {
+                const response = await fetch('/api/new-chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' }
                 });
@@ -388,7 +388,7 @@ function displaySuggestions(suggestions) {
             
             showTypingIndicator();
             try {
-                const response = await fetch('/reset', {
+                const response = await fetch('/api/reset', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ session_id: sessionId })
@@ -517,7 +517,7 @@ async function sendMessage() {
     });
     
     try {
-        const response = await fetch('/chat', {
+        const response = await fetch('/api/chats', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

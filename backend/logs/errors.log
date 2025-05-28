@@ -65382,3 +65382,89 @@ KeyboardInterrupt
 2025-05-27 15:15:48,582 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-1316242a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
 2025-05-27 15:15:48,601 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-6d027bb8] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
 2025-05-27 15:15:48,603 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-6d027bb8] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:04:22,657 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-28 15:04:22,912 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-28 15:04:22,925 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-28 15:04:22,966 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-28 15:04:57,814 - INFO - [loader.py:125] - <module>() - Loading faiss with AVX2 support.
+2025-05-28 15:04:57,891 - INFO - [loader.py:127] - <module>() - Successfully loaded faiss with AVX2 support.
+2025-05-28 15:04:57,898 - INFO - [__init__.py:186] - <module>() - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-28 15:04:57,920 - INFO - [agentic_function.py:45] - <module>() - Amadeus client initialized successfully
+2025-05-28 15:04:58,227 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-28 15:04:58,276 - INFO - [flight_booking.py:552] - <module>() - Starting Uvicorn server on 0.0.0.0:5000 with 1 workers
+2025-05-28 15:04:58,337 - INFO - [flight_booking.py:68] - <module>() - Static files and templates mounted successfully
+2025-05-28 15:04:59,305 - INFO - [db.py:44] - connect_to_mongo() - MongoDB connected and indexes created
+2025-05-28 15:04:59,306 - INFO - [flight_booking.py:46] - lifespan() - Application startup complete
+2025-05-28 15:11:10,016 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-78f8e368] All sessions list requested
+2025-05-28 15:11:10,016 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-78f8e368] Loading session data from chat-history.json
+2025-05-28 15:11:10,017 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-78f8e368] Retrieved 1 sessions
+2025-05-28 15:11:10,021 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-fd7d63fb] All sessions list requested
+2025-05-28 15:11:10,021 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-fd7d63fb] Loading session data from chat-history.json
+2025-05-28 15:11:10,022 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-fd7d63fb] Retrieved 1 sessions
+2025-05-28 15:11:10,031 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-7c71148c] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:11:10,032 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-7c71148c] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:11:10,053 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-0f40000a] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:11:10,055 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-0f40000a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:30,461 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-3d93760c] All sessions list requested
+2025-05-28 15:13:30,462 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-3d93760c] Loading session data from chat-history.json
+2025-05-28 15:13:30,462 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-3d93760c] Retrieved 1 sessions
+2025-05-28 15:13:30,468 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-1649e5e6] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:30,469 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-1649e5e6] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:31,368 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-f8807346] All sessions list requested
+2025-05-28 15:13:31,368 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-f8807346] Loading session data from chat-history.json
+2025-05-28 15:13:31,369 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-f8807346] Retrieved 1 sessions
+2025-05-28 15:13:31,405 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-541e5811] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:31,406 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-541e5811] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:51,110 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-d8ea6873] All sessions list requested
+2025-05-28 15:13:51,111 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-d8ea6873] Loading session data from chat-history.json
+2025-05-28 15:13:51,111 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-d8ea6873] Retrieved 1 sessions
+2025-05-28 15:13:51,169 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-b7149bc0] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:51,169 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-b7149bc0] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:55,068 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-79ec6995] All sessions list requested
+2025-05-28 15:13:55,068 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-79ec6995] Loading session data from chat-history.json
+2025-05-28 15:13:55,069 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-79ec6995] Retrieved 1 sessions
+2025-05-28 15:13:55,091 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-4d268a7a] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:13:55,092 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-4d268a7a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:14:12,397 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-7339b565] All sessions list requested
+2025-05-28 15:14:12,397 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-7339b565] Loading session data from chat-history.json
+2025-05-28 15:14:12,398 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-7339b565] Retrieved 1 sessions
+2025-05-28 15:14:12,403 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-5db11234] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:14:12,403 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-5db11234] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:14:15,698 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-1d7485b6] All sessions list requested
+2025-05-28 15:14:15,699 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-1d7485b6] Loading session data from chat-history.json
+2025-05-28 15:14:15,699 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-1d7485b6] Retrieved 1 sessions
+2025-05-28 15:14:15,738 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-9c357d2a] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:14:15,738 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-9c357d2a] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:16:47,060 - INFO - [flight_booking.py:313] - get_all_sessions() - [REQ-9fe672d0] All sessions list requested
+2025-05-28 15:16:47,060 - DEBUG - [flight_booking.py:324] - get_all_sessions() - [REQ-9fe672d0] Loading session data from chat-history.json
+2025-05-28 15:16:47,061 - INFO - [flight_booking.py:367] - get_all_sessions() - [REQ-9fe672d0] Retrieved 1 sessions
+2025-05-28 15:16:47,066 - INFO - [flight_booking.py:389] - get_session_messages() - [REQ-eddb073e] Fetching chat history for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:16:47,067 - INFO - [flight_booking.py:419] - get_session_messages() - [REQ-eddb073e] Retrieved 0 messages for session ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137
+2025-05-28 15:23:52,941 - INFO - [db.py:52] - close_mongo_connection() - MongoDB connection closed
+2025-05-28 15:23:52,941 - INFO - [flight_booking.py:50] - lifespan() - Application shutdown complete
+2025-05-28 15:23:53,457 - ERROR - [base_events.py:1729] - default_exception_handler() - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 315, in __wakeup
+    self.__step()
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\rmnjs\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "D:\travel agent\trip_planner_agent\.myenv\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt

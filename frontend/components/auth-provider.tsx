@@ -18,18 +18,7 @@ type Message = {
   timestamp: Date
 }
 
-// type ChatHistory = {
-//   id: string
-//   title: string
-//   messages: Message[]
-//   createdAt: Date
-//   updatedAt: Date
-// }
 
-// type ChatHistoryGroup = {
-//   title: string
-//   chats: ChatHistory[]
-// }
 
 // API Response Types
 interface ApiResponse<T> {
@@ -168,12 +157,7 @@ interface AuthContextType {
   
   // Chat Management APIs
   saveChat: (message: string, response: string) => Promise<void>;
-  // getChatHistory: () => Promise<ChatHistory[]>;
-  // sendMessage: (message: string) => Promise<string>;
-  // resetChat: () => Promise<void>;
-  // addNewChat: () => void;
-  // deleteChat: (chatId: string) => Promise<boolean>;
-  // switchChat: (chatId: string) => void;
+
   
   // Flight Management APIs
   getFlights: () => Promise<Flight[]>;
@@ -622,116 +606,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // const getChatHistory = async (): Promise<ChatHistory[]> => {
-  //   try {
-  //     const response = await fetch(`${API_URL}/api/chats`, {
-  //       method: 'GET',
-  //       headers: getAuthHeaders(),
-  //     });
-  //     const data = await response.json();
-  //     // Ensure data is always an array
-  //     const sessions = Array.isArray(data) ? data : [];
-  //     setChatHistory(sessions);
-  //     return sessions;
-  //   } catch (error) {
-  //     console.error("Error fetching chat history:", error);
-  //     setChatHistory([]); // Always set to an array
-  //     return [];
-  //   }
-  // };
-
-  // const getChatHistory = async () => {
-  //   debugger
-    
-  //   try {
-  //     const response = await fetch(`${API_URL}/api/sessions`, {
-  //       method: 'GET',
-  //       headers: getAuthHeaders(),
-  //     });
-  //     if (!response.ok) {
-  //       const errorData = await response.json();
-  //       throw new Error(errorData.detail || 'Failed to fetch chat history');
-  //     }
-  //     const data = await response.json();
-  //     const sessions = Array.isArray(data) ? data : [];
-  //     setChatHistory(sessions);
-  //     console.log("data", sessions);
-  //     return sessions;
-  //   } catch (error) {
-  //     console.error('Error fetching chat history:', error);
-  //     setChatHistory([]);
-  //     throw error;
-  //   }
-  // }
-
-  // const sendMessage = async (message: string): Promise<string> => {
-  //   if (!message.trim()) return "";
-  
-  //   // ✅ Add user's message to chat window
-  //   setMessages((prev: Message[]) => [...prev, { type: 'user', content: message }]);
-  
-  //   try {
-  //     const request: any = { instructions: message };
-  //     const response = await fetch(`${API_URL}/api/chats`, {
-  //       method: 'POST',
-  //       headers: getAuthHeaders(),
-  //       body: JSON.stringify(request),
-  //     });
-  
-  //     const raw = await response.json();
-  //     console.log("✅ API response:", raw);
-  
-  //     // ✅ Extract first response content safely
-  //     const content = raw?.responses?.[0]?.content || "No response received.";
-  //     setSelectedChatId(raw?.session_id)
-      
-  //     // ✅ Add bot's response to chat window
-  //     setMessages((prev: Message[]) => [...prev, { type: 'bot', content }]);
-  //   //  console.log(">>>>>>",raw?.suggestions)
-  //     // ✅ Set suggestions if available
-  //     if (raw?.suggestions) {
-  //       setSuggestions(raw.suggestions);
-  //     } else {
-  //       setSuggestions([]);
-  //     }
-  
-  //     return content;
-  //   } catch (error) {
-  //     console.error("Send message error:", error);
-  //     throw error;
-  //   }
-  // };
-  
-  // const resetChat = async (): Promise<void> => {
-  //   debugger
-  //   setIsResetting(true);
-  //   try {
-  //     const res = await fetch(`${API_URL}/api/reset`, {
-  //       method: 'POST',
-  //       headers: getAuthHeaders(),
-  //       body: JSON.stringify({session_id:selectedChatId})
-  //     });
-  
-  //     const data = await res.json();
-  //     console.log("reset", data);
-  
-  //     if (!res.ok) {
-  //       console.error("❌ Failed to reset chat:", data?.message || res.statusText);
-  //       return;
-  //     }
-  
-  //     console.log("✅ Chat reset:", data.message);
-  
-  //     // Clear frontend chat state
-  //     setMessages([]);
-  //     setSuggestions([]);
-  //   } catch (error) {
-  //     console.error("❌ Reset chat error:", error);
-
-  //   } finally {
-  //     setIsResetting(false);
-  //   }
-  // };
   
   // Flight Management APIs
   const getFlights = async (): Promise<Flight[]> => {
@@ -1004,13 +878,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  // const getDummyData = async (): Promise<DummyData> => {
-  //   const response = await fetch(`${API_URL}/api/dummy-data`, {
-  //     headers: getAuthHeaders(),
-  //   })
-  //   const data = await handleApiResponse<ApiResponse<DummyData>>(response, "Failed to fetch dummy data")
-  //   return data.data!
-  // }
+
 
   const logout = () => {
     setUser(null)
@@ -1020,103 +888,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     router.push("/")
   }
 
-//   const addNewChat = async () => {
-//   try {
-//     const res = await fetch(`${API_URL}/api/new-chat`, {
-//         method: 'POST',
-//         headers: getAuthHeaders(),
-       
-//       });
-
-//     const data = await res.json();
-//     console.log("new chat", data);
-
-//     if (!res.ok) {
-//       console.error("❌ Failed to create new chat:", data?.message || res.statusText);
-//       return;
-//     }
-
-//     // Build frontend chat history item using session_id from backend
-//     // const newChat: ChatHistory = {
-//     //   id: data.session_id,
-//     //   title: "New Chat",
-//     //   messages: [],
-//     //   createdAt: new Date(),
-//     //   updatedAt: new Date(),
-//     // };
-
-//     // setChatHistory(prev => [newChat, ...prev]);
-//     setCurrentChatId(data.session_id);
-//     localStorage.setItem('currentChatId', data.session_id);
-//     setMessages([]);
-//   } catch (error) {
-//     console.error("❌ New chat creation error:", error);
-//   }
-// };
-
-  // const deleteChat = async (id: string): Promise<boolean> => {
-  //   debugger
-  //   const response = await fetch(`${API_URL}/api/session/${id}`, {
-  //     method: 'DELETE',
-  //     headers: getAuthHeaders(),
-  //   });
-  //   const result = await response.json();
-  
-  //   if (response.ok) {
-  //     const filteredChats = Array.isArray(chatHistory) ? chatHistory.filter(chat => chat.id !== id) : [];
-  //     // setChatHistory(filteredChats);
-  //     console.log("Deleted:", result.deleted);
-  //     return true;
-  //   } else {
-  //     console.error("Error:", result.error);
-  //     return false;
-  //   }
-  // };
-
-  
-  
-  // const switchChat = async (id: string, isInitialLoad = false) => {
-  //   debugger
-  //   setCurrentChatId(id);
-  //   localStorage.setItem('currentChatId', id);
-  //   try {
-  //     const res = await fetch(`${API_URL}/api/session/${id}`, {
-  //       method: 'GET',
-  //       headers: getAuthHeaders(),
-  //     });
-  //     if (res.ok) {
-  //       const data = await res.json();
-  //       console.log(data)
-  //       setMessages(data.messages || []);
-  //     } else {
-  //       setMessages([]);
-  //     }
-  //   } catch (error) {
-  //     setMessages([]);
-  //   }
-  // };
-
-  // const switchChat = async (id: string, isInitialLoad = false) => {
-  //   setCurrentChatId(id);
-  //   localStorage.setItem('currentChatId', id);
-  //   try {
-  //     const res = await fetch(`${API_URL}/api/session/${id}`, {
-  //       method: 'GET',
-  //       headers: getAuthHeaders(),
-  //     });
-  //     if (res.ok) {
-  //       const data = await res.json();
-  //       console.log(data);
-  //       setMessages(data.messages.messages || []);
-  //     } else {
-  //       console.warn("Failed to fetch chat history, status:", res.status);
-  //       setMessages([]);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching chat session:", error);
-  //     setMessages([]);
-  //   }
-  // };
   
 
   // Add the new authenticateWithToken function

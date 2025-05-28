@@ -145,7 +145,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-   const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  //  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const searchParams = request.nextUrl.searchParams
   const code = searchParams.get("code")
   
@@ -164,7 +165,7 @@ export async function GET(request: NextRequest) {
         code,
         client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "",
         client_secret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET || "",
-        redirect_uri: "http://localhost:3000/api/auth/callback/google",
+        redirect_uri: `${API_URL}/api/auth/callback/google`,
         grant_type: "authorization_code",
       }),
     })

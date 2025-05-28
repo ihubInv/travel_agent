@@ -1,5 +1,11 @@
+
 pipeline {
     agent any
+
+    // Auto-trigger build on GitHub push events
+    triggers {
+        githubPush()
+    }
 
     environment {
         DEPLOY_USER = 'ubuntu'
@@ -17,6 +23,9 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
+                sh 'docker rmi -f genaiihub24/my-docker:frontend-app || true'
+                sh 'docker rmi -f genaiihub24/my-docker:backend-app || true'
+                
                 sh 'docker build -t genaiihub24/my-docker:frontend-app ./frontend'
                 sh 'docker build -t genaiihub24/my-docker:backend-app ./backend'
             }
