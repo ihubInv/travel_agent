@@ -1,8 +1,6 @@
-
 pipeline {
     agent any
 
-    // Auto-trigger build on GitHub push events
     triggers {
         githubPush()
     }
@@ -23,11 +21,15 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
+                // Clean up old images
                 sh 'docker rmi -f genaiihub24/my-docker:frontend-app || true'
                 sh 'docker rmi -f genaiihub24/my-docker:backend-app || true'
-                
-                sh 'docker build -t genaiihub24/my-docker:frontend-app ./frontend'
-                sh 'docker build -t genaiihub24/my-docker:backend-app ./backend'
+
+                // Build frontend with Dockerfile at frontend/ using full context
+                sh 'docker build -t genaiihub24/my-docker:frontend-app -f frontend/Dockerfile .'
+
+                // Build backend with Dockerfile at backend/ using full context
+                sh 'docker build -t genaiihub24/my-docker:backend-app -f backend/Dockerfile .'
             }
         }
 
@@ -46,7 +48,7 @@ pipeline {
                             mkdir -p ${DEPLOY_DIR}
                         '
                         scp -o StrictHostKeyChecking=no deploy.tar.gz ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/
-                        
+
                         ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} '
                             set -e
                             cd ${DEPLOY_DIR}
