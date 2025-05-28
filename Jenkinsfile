@@ -26,10 +26,10 @@ pipeline {
                 sh 'docker rmi -f genaiihub24/my-docker:backend-app || true'
 
                 // Build frontend with Dockerfile at frontend/ using full context
-                sh 'docker build -t genaiihub24/my-docker:frontend-app -f frontend/Dockerfile .'
+                //sh 'docker build -t genaiihub24/my-docker:frontend-app -f frontend/Dockerfile .'
 
                 // Build backend with Dockerfile at backend/ using full context
-                sh 'docker build -t genaiihub24/my-docker:backend-app -f backend/Dockerfile .'
+                //sh 'docker build -t genaiihub24/my-docker:backend-app -f backend/Dockerfile .'
             }
         }
 
