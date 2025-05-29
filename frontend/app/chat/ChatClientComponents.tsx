@@ -166,7 +166,7 @@ export default function ChatClientComponents() {
         ...session,
         created_at: new Date(session.created_at),
         updated_at: new Date(session.updated_at),
-        messages: session.messages.messages.map((msg: any) => ({
+        messages: session?.messages?.messages?.map((msg: any) => ({
           ...msg,
           content: formatMessageContent(msg.content),
           timestamp: new Date(msg.timestamp)
@@ -219,7 +219,7 @@ export default function ChatClientComponents() {
       }
 
       const session = data.session;
-      const formattedMessages = session.messages.messages.map((msg: any) => ({
+      const formattedMessages = session?.messages?.messages?.map((msg: any) => ({
         ...msg,
         content: formatMessageContent(msg.content),
         timestamp: new Date(msg.timestamp)
@@ -297,17 +297,38 @@ export default function ChatClientComponents() {
         setMessages(prev => [...prev, botMessage]);
 
         // Update chat history
-        setChatHistory(prev => prev.map(chat =>
+        // setChatHistory(prev => prev?.map(chat =>
+        //   chat._id === data.session_id
+        //     ? {
+        //       ...chat,
+        //       messages: {
+        //         messages: [...chat?.messages?.messages, userMessage, botMessage]
+        //       },
+        //       updated_at: new Date()
+        //     }
+        //     : chat
+        // ));
+
+   setChatHistory(prev => prev?.map(chat =>
           chat._id === data.session_id
             ? {
               ...chat,
               messages: {
-                messages: [...chat.messages.messages, userMessage, botMessage]
+                messages: [
+                  ...(chat?.messages?.messages || []),
+                  userMessage,
+                  botMessage
+                ]
               },
               updated_at: new Date()
             }
             : chat
         ));
+
+
+
+
+
 
         // Update suggestions
         if (data.suggestions && Array.isArray(data.suggestions)) {
@@ -749,7 +770,7 @@ export default function ChatClientComponents() {
               ? {
                 ...chat,
                 messages: {
-                  messages: [...chat.messages.messages, userMessage, botMessage]
+                  messages: [...chat?.messages?.messages, userMessage, botMessage]
                 },
                 updated_at: new Date()
               }
@@ -897,12 +918,16 @@ export default function ChatClientComponents() {
         setMessages(prev => [...prev, botMessage]);
 
         // Update chat history
-        setChatHistory(prev => prev.map(chat =>
+        setChatHistory(prev => prev?.map(chat =>
           chat._id === data.session_id
             ? {
               ...chat,
               messages: {
-                messages: [...chat.messages.messages, userMessage, botMessage]
+                messages: [
+                  ...(chat?.messages?.messages || []),
+                  userMessage,
+                  botMessage
+                ]
               },
               updated_at: new Date()
             }

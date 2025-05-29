@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-05-19T15:01:21.340621",
+  "timestamp": "2025-05-29T11:59:12.295527",
   "search_params": {
     "origin": "GOI",
-    "destination": "SYR",
-    "departure_date": "2025-05-22",
-    "passengers": 1,
+    "destination": "BOM",
+    "departure_date": "2025-06-12",
+    "passengers": 2,
     "cabin_class": "ECONOMY"
   },
   "offers": {
@@ -16,77 +16,32 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-05-22",
-      "lastTicketingDateTime": "2025-05-22",
+      "lastTicketingDate": "2025-05-29",
+      "lastTicketingDateTime": "2025-05-29",
       "numberOfBookableSeats": 9,
       "itineraries": [
         {
-          "duration": "PT30H2M",
+          "duration": "PT1H25M",
           "segments": [
             {
               "departure": {
                 "iataCode": "GOX",
-                "at": "2025-05-22T03:45:00"
+                "at": "2025-06-12T20:50:00"
               },
               "arrival": {
-                "iataCode": "DOH",
-                "at": "2025-05-22T04:50:00"
+                "iataCode": "BOM",
+                "terminal": "2",
+                "at": "2025-06-12T22:15:00"
               },
-              "carrierCode": "QR",
-              "number": "523",
+              "carrierCode": "AI",
+              "number": "2514",
               "aircraft": {
-                "code": "788"
+                "code": "32N"
               },
               "operating": {
-                "carrierCode": "QR"
+                "carrierCode": "AI"
               },
-              "duration": "PT3H35M",
-              "id": "1",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "DOH",
-                "at": "2025-05-22T08:00:00"
-              },
-              "arrival": {
-                "iataCode": "JFK",
-                "terminal": "8",
-                "at": "2025-05-22T15:10:00"
-              },
-              "carrierCode": "QR",
-              "number": "701",
-              "aircraft": {
-                "code": "77W"
-              },
-              "operating": {
-                "carrierCode": "QR"
-              },
-              "duration": "PT14H10M",
-              "id": "2",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "JFK",
-                "terminal": "5",
-                "at": "2025-05-22T22:59:00"
-              },
-              "arrival": {
-                "iataCode": "SYR",
-                "at": "2025-05-23T00:17:00"
-              },
-              "carrierCode": "QR",
-              "number": "3925",
-              "aircraft": {
-                "code": "223"
-              },
-              "operating": {
-                "carrierCode": "B6"
-              },
-              "duration": "PT1H18M",
+              "duration": "PT1H25M",
               "id": "3",
               "numberOfStops": 0,
               "blacklistedInEU": false
@@ -96,8 +51,8 @@
       ],
       "price": {
         "currency": "INR",
-        "total": "62143.00",
-        "base": "27045.00",
+        "total": "7518.00",
+        "base": "4312.00",
         "fees": [
           {
             "amount": "0.00",
@@ -108,7 +63,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "62143.00"
+        "grandTotal": "7518.00"
       },
       "pricingOptions": {
         "fareType": [
@@ -117,7 +72,7 @@
         "includedCheckedBagsOnly": true
       },
       "validatingAirlineCodes": [
-        "QR"
+        "AI"
       ],
       "travelerPricings": [
         {
@@ -126,42 +81,36 @@
           "travelerType": "ADULT",
           "price": {
             "currency": "INR",
-            "total": "62143.00",
-            "base": "27045.00"
+            "total": "3759.00",
+            "base": "2156.00"
           },
           "fareDetailsBySegment": [
             {
-              "segmentId": "1",
+              "segmentId": "3",
               "cabin": "ECONOMY",
-              "fareBasis": "NJR4R1RI",
-              "brandedFare": "ECLASSIC",
-              "brandedFareLabel": "ECONOMY CLASSIC",
-              "class": "N",
+              "fareBasis": "SU1YXF2I",
+              "brandedFare": "ECOVALU",
+              "brandedFareLabel": "ECO VALUE",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
-                "quantity": 1
+                "weight": 7,
+                "weightUnit": "KG"
               },
               "amenities": [
                 {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
                   "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": true,
+                  "isChargeable": false,
                   "amenityType": "PRE_RESERVED_SEAT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "MEAL BEVERAGE",
+                  "description": "MEAL SERVICES",
                   "isChargeable": false,
                   "amenityType": "MEAL",
                   "amenityProvider": {
@@ -185,15 +134,15 @@
                   }
                 },
                 {
-                  "description": "PREMIUM SEAT",
+                  "description": "UPGRADE",
                   "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
+                  "amenityType": "UPGRADES",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "50 PCT QMILES ACCUMULATION",
+                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
                   "isChargeable": false,
                   "amenityType": "BRANDED_FARES",
                   "amenityProvider": {
@@ -201,111 +150,45 @@
                   }
                 }
               ]
-            },
-            {
-              "segmentId": "2",
-              "cabin": "ECONOMY",
-              "fareBasis": "NJR4R1RI",
-              "brandedFare": "ECLASSIC",
-              "brandedFareLabel": "ECONOMY CLASSIC",
-              "class": "N",
-              "includedCheckedBags": {
-                "quantity": 2
-              },
-              "includedCabinBags": {
-                "quantity": 1
-              },
-              "amenities": [
-                {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "MEAL BEVERAGE",
-                  "isChargeable": false,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "REFUNDABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "CHANGEABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "PREMIUM SEAT",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "50 PCT QMILES ACCUMULATION",
-                  "isChargeable": false,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                }
-              ]
-            },
+            }
+          ]
+        },
+        {
+          "travelerId": "2",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "INR",
+            "total": "3759.00",
+            "base": "2156.00"
+          },
+          "fareDetailsBySegment": [
             {
               "segmentId": "3",
               "cabin": "ECONOMY",
-              "fareBasis": "NJR4R1RI",
-              "brandedFare": "ECLASSIC",
-              "brandedFareLabel": "ECONOMY CLASSIC",
-              "class": "N",
+              "fareBasis": "SU1YXF2I",
+              "brandedFare": "ECOVALU",
+              "brandedFareLabel": "ECO VALUE",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
-                "quantity": 2
+                "weight": 7,
+                "weightUnit": "KG"
               },
               "amenities": [
                 {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
                   "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": true,
+                  "isChargeable": false,
                   "amenityType": "PRE_RESERVED_SEAT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "MEAL BEVERAGE",
+                  "description": "MEAL SERVICES",
                   "isChargeable": false,
                   "amenityType": "MEAL",
                   "amenityProvider": {
@@ -329,15 +212,15 @@
                   }
                 },
                 {
-                  "description": "PREMIUM SEAT",
+                  "description": "UPGRADE",
                   "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
+                  "amenityType": "UPGRADES",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "50 PCT QMILES ACCUMULATION",
+                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
                   "isChargeable": false,
                   "amenityType": "BRANDED_FARES",
                   "amenityProvider": {
@@ -358,78 +241,33 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-05-22",
-      "lastTicketingDateTime": "2025-05-22",
-      "numberOfBookableSeats": 6,
+      "lastTicketingDate": "2025-05-29",
+      "lastTicketingDateTime": "2025-05-29",
+      "numberOfBookableSeats": 9,
       "itineraries": [
         {
-          "duration": "PT40H34M",
+          "duration": "PT1H25M",
           "segments": [
             {
               "departure": {
                 "iataCode": "GOX",
-                "at": "2025-05-22T03:45:00"
+                "at": "2025-06-12T17:00:00"
               },
               "arrival": {
-                "iataCode": "DOH",
-                "at": "2025-05-22T04:50:00"
+                "iataCode": "BOM",
+                "terminal": "2",
+                "at": "2025-06-12T18:25:00"
               },
-              "carrierCode": "QR",
-              "number": "523",
+              "carrierCode": "AI",
+              "number": "846",
               "aircraft": {
-                "code": "788"
+                "code": "32N"
               },
               "operating": {
-                "carrierCode": "QR"
+                "carrierCode": "AI"
               },
-              "duration": "PT3H35M",
-              "id": "7",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "DOH",
-                "at": "2025-05-22T08:00:00"
-              },
-              "arrival": {
-                "iataCode": "JFK",
-                "terminal": "8",
-                "at": "2025-05-22T15:10:00"
-              },
-              "carrierCode": "QR",
-              "number": "701",
-              "aircraft": {
-                "code": "77W"
-              },
-              "operating": {
-                "carrierCode": "QR"
-              },
-              "duration": "PT14H10M",
-              "id": "8",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "JFK",
-                "terminal": "5",
-                "at": "2025-05-23T09:29:00"
-              },
-              "arrival": {
-                "iataCode": "SYR",
-                "at": "2025-05-23T10:49:00"
-              },
-              "carrierCode": "B6",
-              "number": "1816",
-              "aircraft": {
-                "code": "223"
-              },
-              "operating": {
-                "carrierCode": "B6"
-              },
-              "duration": "PT1H20M",
-              "id": "9",
+              "duration": "PT1H25M",
+              "id": "2",
               "numberOfStops": 0,
               "blacklistedInEU": false
             }
@@ -438,8 +276,8 @@
       ],
       "price": {
         "currency": "INR",
-        "total": "76696.00",
-        "base": "41845.00",
+        "total": "7680.00",
+        "base": "4466.00",
         "fees": [
           {
             "amount": "0.00",
@@ -450,7 +288,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "76696.00"
+        "grandTotal": "7680.00"
       },
       "pricingOptions": {
         "fareType": [
@@ -459,7 +297,7 @@
         "includedCheckedBagsOnly": true
       },
       "validatingAirlineCodes": [
-        "QR"
+        "AI"
       ],
       "travelerPricings": [
         {
@@ -468,32 +306,26 @@
           "travelerType": "ADULT",
           "price": {
             "currency": "INR",
-            "total": "76696.00",
-            "base": "41845.00"
+            "total": "3840.00",
+            "base": "2233.00"
           },
           "fareDetailsBySegment": [
             {
-              "segmentId": "7",
+              "segmentId": "2",
               "cabin": "ECONOMY",
-              "fareBasis": "SJR4R1SI",
-              "brandedFare": "ECONVENIEN",
-              "brandedFareLabel": "ECONOMY CONVENIENCE",
+              "fareBasis": "SU1YXR2I",
+              "brandedFare": "ECOVALU",
+              "brandedFareLabel": "ECO VALUE",
               "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
-                "quantity": 1
+                "weight": 7,
+                "weightUnit": "KG"
               },
               "amenities": [
-                {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
                 {
                   "description": "PRE RESERVED SEAT ASSIGNMENT",
                   "isChargeable": false,
@@ -503,7 +335,7 @@
                   }
                 },
                 {
-                  "description": "MEAL BEVERAGE",
+                  "description": "MEAL SERVICES",
                   "isChargeable": false,
                   "amenityType": "MEAL",
                   "amenityProvider": {
@@ -527,15 +359,15 @@
                   }
                 },
                 {
-                  "description": "PREMIUM SEAT",
+                  "description": "UPGRADE",
                   "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
+                  "amenityType": "UPGRADES",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "75 PCT  QMILES ACCUMULATION",
+                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
                   "isChargeable": false,
                   "amenityType": "BRANDED_FARES",
                   "amenityProvider": {
@@ -543,29 +375,35 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "travelerId": "2",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "INR",
+            "total": "3840.00",
+            "base": "2233.00"
+          },
+          "fareDetailsBySegment": [
             {
-              "segmentId": "8",
+              "segmentId": "2",
               "cabin": "ECONOMY",
-              "fareBasis": "SJR4R1SI",
-              "brandedFare": "ECONVENIEN",
-              "brandedFareLabel": "ECONOMY CONVENIENCE",
+              "fareBasis": "SU1YXR2I",
+              "brandedFare": "ECOVALU",
+              "brandedFareLabel": "ECO VALUE",
               "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
-                "quantity": 1
+                "weight": 7,
+                "weightUnit": "KG"
               },
               "amenities": [
-                {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
                 {
                   "description": "PRE RESERVED SEAT ASSIGNMENT",
                   "isChargeable": false,
@@ -575,7 +413,7 @@
                   }
                 },
                 {
-                  "description": "MEAL BEVERAGE",
+                  "description": "MEAL SERVICES",
                   "isChargeable": false,
                   "amenityType": "MEAL",
                   "amenityProvider": {
@@ -599,87 +437,15 @@
                   }
                 },
                 {
-                  "description": "PREMIUM SEAT",
+                  "description": "UPGRADE",
                   "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
+                  "amenityType": "UPGRADES",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "75 PCT  QMILES ACCUMULATION",
-                  "isChargeable": false,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                }
-              ]
-            },
-            {
-              "segmentId": "9",
-              "cabin": "ECONOMY",
-              "fareBasis": "SJR4R1SI",
-              "brandedFare": "ECONVENIEN",
-              "brandedFareLabel": "ECONOMY CONVENIENCE",
-              "class": "W",
-              "includedCheckedBags": {
-                "quantity": 2
-              },
-              "includedCabinBags": {
-                "quantity": 2
-              },
-              "amenities": [
-                {
-                  "description": "CABIN BAG 1 PIECE 7 KG",
-                  "isChargeable": false,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": false,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "MEAL BEVERAGE",
-                  "isChargeable": false,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "REFUNDABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "CHANGEABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "PREMIUM SEAT",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "75 PCT  QMILES ACCUMULATION",
+                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
                   "isChargeable": false,
                   "amenityType": "BRANDED_FARES",
                   "amenityProvider": {
@@ -700,77 +466,33 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-05-22",
-      "lastTicketingDateTime": "2025-05-22",
+      "lastTicketingDate": "2025-05-29",
+      "lastTicketingDateTime": "2025-05-29",
       "numberOfBookableSeats": 9,
       "itineraries": [
         {
-          "duration": "PT34H43M",
+          "duration": "PT1H20M",
           "segments": [
             {
               "departure": {
-                "iataCode": "GOI",
-                "at": "2025-05-22T22:45:00"
+                "iataCode": "GOX",
+                "at": "2025-06-12T15:50:00"
               },
               "arrival": {
                 "iataCode": "BOM",
                 "terminal": "2",
-                "at": "2025-05-23T00:15:00"
+                "at": "2025-06-12T17:10:00"
               },
               "carrierCode": "AI",
-              "number": "606",
+              "number": "2588",
               "aircraft": {
                 "code": "32N"
               },
               "operating": {
                 "carrierCode": "AI"
               },
-              "duration": "PT1H30M",
-              "id": "10",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "BOM",
-                "terminal": "2",
-                "at": "2025-05-23T01:45:00"
-              },
-              "arrival": {
-                "iataCode": "EWR",
-                "terminal": "B",
-                "at": "2025-05-23T07:55:00"
-              },
-              "carrierCode": "AI",
-              "number": "191",
-              "aircraft": {
-                "code": "77W"
-              },
-              "operating": {
-                "carrierCode": "AI"
-              },
-              "duration": "PT15H40M",
-              "id": "11",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "EWR",
-                "terminal": "C",
-                "at": "2025-05-23T22:35:00"
-              },
-              "arrival": {
-                "iataCode": "SYR",
-                "at": "2025-05-23T23:58:00"
-              },
-              "carrierCode": "UA",
-              "number": "3666",
-              "aircraft": {
-                "code": "E7W"
-              },
-              "duration": "PT1H23M",
-              "id": "12",
+              "duration": "PT1H20M",
+              "id": "1",
               "numberOfStops": 0,
               "blacklistedInEU": false
             }
@@ -779,8 +501,8 @@
       ],
       "price": {
         "currency": "INR",
-        "total": "79420.00",
-        "base": "56555.00",
+        "total": "7758.00",
+        "base": "4542.00",
         "fees": [
           {
             "amount": "0.00",
@@ -791,7 +513,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "79420.00"
+        "grandTotal": "7758.00"
       },
       "pricingOptions": {
         "fareType": [
@@ -809,19 +531,20 @@
           "travelerType": "ADULT",
           "price": {
             "currency": "INR",
-            "total": "79420.00",
-            "base": "56555.00"
+            "total": "3879.00",
+            "base": "2271.00"
           },
           "fareDetailsBySegment": [
             {
-              "segmentId": "10",
+              "segmentId": "1",
               "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
+              "fareBasis": "SU1YXR2I",
               "brandedFare": "ECOVALU",
               "brandedFareLabel": "ECO VALUE",
-              "class": "U",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
                 "weight": 7,
@@ -877,84 +600,33 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "travelerId": "2",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "INR",
+            "total": "3879.00",
+            "base": "2271.00"
+          },
+          "fareDetailsBySegment": [
             {
-              "segmentId": "11",
+              "segmentId": "1",
               "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
+              "fareBasis": "SU1YXR2I",
               "brandedFare": "ECOVALU",
               "brandedFareLabel": "ECO VALUE",
-              "class": "U",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
                 "weight": 7,
                 "weightUnit": "KG"
-              },
-              "amenities": [
-                {
-                  "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": false,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "MEAL SERVICES",
-                  "isChargeable": false,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "REFUNDABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "CHANGEABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "UPGRADE",
-                  "isChargeable": true,
-                  "amenityType": "UPGRADES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
-                  "isChargeable": false,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                }
-              ]
-            },
-            {
-              "segmentId": "12",
-              "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
-              "brandedFare": "ECOVALU",
-              "brandedFareLabel": "ECO VALUE",
-              "class": "K",
-              "includedCheckedBags": {
-                "quantity": 2
-              },
-              "includedCabinBags": {
-                "quantity": 1
               },
               "amenities": [
                 {
@@ -1019,77 +691,33 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-05-22",
-      "lastTicketingDateTime": "2025-05-22",
+      "lastTicketingDate": "2025-05-29",
+      "lastTicketingDateTime": "2025-05-29",
       "numberOfBookableSeats": 9,
       "itineraries": [
         {
-          "duration": "PT35H33M",
+          "duration": "PT1H30M",
           "segments": [
             {
               "departure": {
                 "iataCode": "GOI",
-                "at": "2025-05-22T21:55:00"
+                "at": "2025-06-12T22:45:00"
               },
               "arrival": {
-                "iataCode": "DEL",
-                "terminal": "3",
-                "at": "2025-05-23T00:40:00"
+                "iataCode": "BOM",
+                "terminal": "2",
+                "at": "2025-06-13T00:15:00"
               },
               "carrierCode": "AI",
-              "number": "2856",
+              "number": "606",
               "aircraft": {
                 "code": "32N"
               },
               "operating": {
                 "carrierCode": "AI"
               },
-              "duration": "PT2H45M",
+              "duration": "PT1H30M",
               "id": "4",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "DEL",
-                "terminal": "3",
-                "at": "2025-05-23T02:25:00"
-              },
-              "arrival": {
-                "iataCode": "EWR",
-                "terminal": "B",
-                "at": "2025-05-23T07:35:00"
-              },
-              "carrierCode": "AI",
-              "number": "105",
-              "aircraft": {
-                "code": "359"
-              },
-              "operating": {
-                "carrierCode": "AI"
-              },
-              "duration": "PT14H40M",
-              "id": "5",
-              "numberOfStops": 0,
-              "blacklistedInEU": false
-            },
-            {
-              "departure": {
-                "iataCode": "EWR",
-                "terminal": "C",
-                "at": "2025-05-23T22:35:00"
-              },
-              "arrival": {
-                "iataCode": "SYR",
-                "at": "2025-05-23T23:58:00"
-              },
-              "carrierCode": "UA",
-              "number": "3666",
-              "aircraft": {
-                "code": "E7W"
-              },
-              "duration": "PT1H23M",
-              "id": "6",
               "numberOfStops": 0,
               "blacklistedInEU": false
             }
@@ -1098,8 +726,8 @@
       ],
       "price": {
         "currency": "INR",
-        "total": "79486.00",
-        "base": "56555.00",
+        "total": "7818.00",
+        "base": "5204.00",
         "fees": [
           {
             "amount": "0.00",
@@ -1110,7 +738,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "79486.00"
+        "grandTotal": "7818.00"
       },
       "pricingOptions": {
         "fareType": [
@@ -1128,19 +756,20 @@
           "travelerType": "ADULT",
           "price": {
             "currency": "INR",
-            "total": "79486.00",
-            "base": "56555.00"
+            "total": "3909.00",
+            "base": "2602.00"
           },
           "fareDetailsBySegment": [
             {
               "segmentId": "4",
               "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
+              "fareBasis": "SU1YXF2I",
               "brandedFare": "ECOVALU",
               "brandedFareLabel": "ECO VALUE",
-              "class": "U",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
                 "weight": 7,
@@ -1196,84 +825,33 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "travelerId": "2",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "INR",
+            "total": "3909.00",
+            "base": "2602.00"
+          },
+          "fareDetailsBySegment": [
             {
-              "segmentId": "5",
+              "segmentId": "4",
               "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
+              "fareBasis": "SU1YXF2I",
               "brandedFare": "ECOVALU",
               "brandedFareLabel": "ECO VALUE",
-              "class": "U",
+              "class": "S",
               "includedCheckedBags": {
-                "quantity": 2
+                "weight": 15,
+                "weightUnit": "KG"
               },
               "includedCabinBags": {
                 "weight": 7,
                 "weightUnit": "KG"
-              },
-              "amenities": [
-                {
-                  "description": "PRE RESERVED SEAT ASSIGNMENT",
-                  "isChargeable": false,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "MEAL SERVICES",
-                  "isChargeable": false,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "REFUNDABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "CHANGEABLE TICKET",
-                  "isChargeable": true,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "UPGRADE",
-                  "isChargeable": true,
-                  "amenityType": "UPGRADES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "FREE CHECKED BAGGAGE ALLOWANCE",
-                  "isChargeable": false,
-                  "amenityType": "BRANDED_FARES",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                }
-              ]
-            },
-            {
-              "segmentId": "6",
-              "cabin": "ECONOMY",
-              "fareBasis": "UK3YXSBL",
-              "brandedFare": "ECOVALU",
-              "brandedFareLabel": "ECO VALUE",
-              "class": "G",
-              "includedCheckedBags": {
-                "quantity": 2
-              },
-              "includedCabinBags": {
-                "quantity": 1
               },
               "amenities": [
                 {

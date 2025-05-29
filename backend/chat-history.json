@@ -1,6 +1,67 @@
 {
-  "ac9eacaf-0b5b-47f9-b17c-5ad55ef0a137": {
-    "last_updated": "2025-05-27 12:15:33",
-    "messages": []
+  "55690931-88dc-4452-be7f-666369a2ee26": {
+    "last_updated": "2025-05-29 12:07:44",
+    "messages": [
+      {
+        "role": "User",
+        "content": "search a flight from Goa to Mumbai on 12 June 2025 for one passenger with cabin type economy",
+        "timestamp": "2025-05-29 11:55:35"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "Here's a sample response to the user:\n\n\"Hi there! I've found some great flight options for you. Here are your top choices:\n\n* Air India Flight AI 2514: Departing from Goa (GOX) on June 12th at 8:50 PM, arriving in Mumbai (BOM T2) at 10:15 PM. This is our **Cheapest** option at \u20b93,759! You'll get a direct flight with a meal included.\n* Air India Flight AI 2588: Departing from Goa (GOX) on June 12th at 3:50 PM, arriving in Mumbai (BOM T2) at 5:10 PM. This is our **Fastest** option at \u20b93,879! You'll get a direct flight with a meal included.\n* Air India Flight AI 846: Departing from Goa (GOX) on June 12th at 5:00 PM, arriving in Mumbai (BOM T2) at 6:25 PM. This is our **Standard** option at \u20b93,840! You'll get a direct flight with a meal included.\n* Air India Flight AI 606: Departing from Goa (GOI) on June 12th at 10:45 PM, arriving in Mumbai (BOM T2) at 12:15 AM+1. This is our **Standard** option at \u20b93,909! You'll get a direct flight with a meal included.\n\nWhich one of these flights works best for you?\"\n\nNote that the response is formatted to match the user's original question and provides a clear summary of each flight option, including the airline, flight number, departure and arrival times, price, and amenities. The response also includes a brief description of each flight's category (Cheapest, Fastest, Standard) to help the user make an informed decision.",
+        "timestamp": "2025-05-29 11:55:44"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "",
+        "timestamp": "2025-05-29 11:55:44"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "Would you like me to add anything else?",
+        "timestamp": "2025-05-29 11:55:44"
+      },
+      {
+        "role": "User",
+        "content": "book flight with offer_id: 1",
+        "timestamp": "2025-05-29 11:56:41"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "**Flight Booking Confirmation**\n\nYour flight with Offer ID: **1** has been successfully booked.\n\n**Booking Details:**\n- Order ID: `eJzTd9f3C%2FMNDXYHAAvTAoY%3D`\n- Booking Code: `NVMUSG`\n- Status: `confirmed`\n\n**Flight Information:**\n\n* Departure: GOX\n* Arrival: BOM\n* Date: 2025-06-12, 20:50:00 hours\n\n**Check-in Details:**\nWe've included three convenient check-in options for your flight:\n\n1. **Mobile Check-in:** [AIEN-GBMobile](https://flyai.mobi/itraveljs/?lang=en)\n2. **Web Check-in:** [AIEN-GBWeb](https://icheck.sita.aero/iCheckWebAI/)\n3. **All Channels Check-in:** [Travel.AirIndia.In](https://travel.airindia.in/ssci/identification)\n\nPlease note that you can check in through the airline's app or website for a smoother experience.\n\nIf you have any further questions or concerns, feel free to ask!",
+        "timestamp": "2025-05-29 11:56:53"
+      },
+      {
+        "role": "User",
+        "content": "search a flight from Goa to Mumbai on 12 June 2025 for two passengers with cabin type economy",
+        "timestamp": "2025-05-29 11:59:06"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "**Flight Options for Your Journey**\n\nWe've found several flight options for your journey from GOX to BOM (T2) on 2025-06-12. Here are the top recommendations:\n\n### Option 1: Air India AI 2514 - Cheapest & Fastest\n\n*   **Airline:** Air India\n*   **Flight Number:** AI 2514\n*   **Departure Time:** 20:50\n*   **Arrival Time:** 22:15\n*   **Duration:** 1h 25m\n*   **Stops:** Direct\n*   **Price (INR):** \u20b97,518\n\n### Option 2: Air India AI 2588 - Fastest\n\n*   **Airline:** Air India\n*   **Flight Number:** AI 2588\n*   **Departure Time:** 15:50\n*   **Arrival Time:** 17:10\n*   **Duration:** 1h 20m\n*   **Stops:** Direct\n*   **Price (INR):** \u20b97,758\n\n### Option 3: Air India AI 846 - Standard\n\n*   **Airline:** Air India\n*   **Flight Number:** AI 846\n*   **Departure Time:** 17:00\n*   **Arrival Time:** 18:25\n*   **Duration:** 1h 25m\n*   **Stops:** Direct\n*   **Price (INR):** \u20b97,680\n\n### Option 4: Air India AI 606 - Standard with a layover\n\n*   **Airline:** Air India\n*   **Flight Number:** AI 606\n*   **Departure Time:** 22:45\n*   **Arrival Time:** 00:15+1\n*   **Duration:** 1h 30m\n*   **Stops:** Direct (with a layover)\n*   **Price (INR):** \u20b97,818\n\nThese options are sorted by price from cheapest to most expensive. We recommend choosing the one that best fits your budget and travel preferences.\n\nPlease let me know if you need more information or would like to book any of these flights!",
+        "timestamp": "2025-05-29 11:59:16"
+      },
+      {
+        "role": "User",
+        "content": "thank you for your help",
+        "timestamp": "2025-05-29 12:07:08"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "**What are you planning to do next?**\n\nWould you like me to search for flights, hotels, or activities for your trip?\n\nOr perhaps you'd like some personalized recommendations based on your interests?\n\nLet me know how I can assist you further!",
+        "timestamp": "2025-05-29 12:07:12"
+      },
+      {
+        "role": "User",
+        "content": "View order eJzTd9f3C%2FMNDXYHAAvTAoY%3D details",
+        "timestamp": "2025-05-29 12:07:39"
+      },
+      {
+        "role": "TravelManagerAgent",
+        "content": "I'm having trouble accessing your flight order details. It's possible that the order ID is incorrect or has expired.\n\nCan you please try again with a different order ID, or would you like me to help you find an alternative flight?",
+        "timestamp": "2025-05-29 12:07:43"
+      }
+    ]
   }
 }
